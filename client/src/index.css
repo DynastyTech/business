@@ -1,0 +1,223 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    color: #1f2937;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Dark mode styles */
+  .dark body {
+    color: #f3f4f6;
+    background-color: #111827;
+  }
+  
+  .dark {
+    color-scheme: dark;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    transition: color 0.3s ease;
+  }
+  
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: #f9fafb;
+  }
+  
+  /* Prevent horizontal scrolling on mobile */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Smooth scrolling for iOS */
+  @supports (-webkit-overflow-scrolling: touch) {
+    html {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+  
+  /* Additional mobile fixes */
+  .container-custom {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  
+  /* Prevent background elements from causing overflow */
+  .absolute {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  
+  /* Ensure all sections are properly contained */
+  section {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-100 hover:bg-secondary-200 text-secondary-800 font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-100;
+  }
+  
+  .btn-accent {
+    @apply bg-accent-500 hover:bg-accent-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+  }
+  
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 transform hover:scale-105 hover:shadow-xl;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .backdrop-blur-custom {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  /* Mobile scrolling fixes */
+  .mobile-scroll-fix {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    max-width: 100vw;
+  }
+  
+  /* Prevent horizontal overflow */
+  .no-horizontal-scroll {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  
+  /* Enhanced card hover effects */
+  .card-hover-enhanced {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
+    border: 2px solid transparent;
+  }
+  
+  .card-hover-enhanced:hover {
+    transform: scale(1.05);
+    border-color: #3b82f6;
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
+    z-index: 10;
+  }
+  
+  .dark .card-hover-enhanced:hover {
+    border-color: #60a5fa;
+    box-shadow: 0 20px 25px -5px rgba(96, 165, 250, 0.2), 0 10px 10px -5px rgba(96, 165, 250, 0.1);
+  }
+  
+  /* Service card specific hover */
+  .service-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
+    border: 2px solid transparent;
+  }
+  
+  .service-card-hover:hover {
+    transform: scale(1.03);
+    border-color: #3b82f6;
+    box-shadow: 0 25px 50px -12px rgba(59, 130, 246, 0.25);
+    z-index: 10;
+  }
+  
+  .dark .service-card-hover:hover {
+    border-color: #60a5fa;
+    box-shadow: 0 25px 50px -12px rgba(96, 165, 250, 0.3);
+  }
+  
+  /* Project card specific hover */
+  .project-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
+    border: 2px solid transparent;
+  }
+  
+  .project-card-hover:hover {
+    transform: scale(1.02);
+    border-color: #3b82f6;
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
+    z-index: 10;
+  }
+  
+  .dark .project-card-hover:hover {
+    border-color: #60a5fa;
+    box-shadow: 0 20px 25px -5px rgba(96, 165, 250, 0.2), 0 10px 10px -5px rgba(96, 165, 250, 0.1);
+  }
+  
+  /* Skill card specific hover */
+  .skill-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
+    border: 2px solid transparent;
+  }
+  
+  .skill-card-hover:hover {
+    transform: scale(1.05);
+    border-color: #3b82f6;
+    box-shadow: 0 15px 35px -5px rgba(59, 130, 246, 0.15);
+    z-index: 10;
+  }
+  
+  .dark .skill-card-hover:hover {
+    border-color: #60a5fa;
+    box-shadow: 0 15px 35px -5px rgba(96, 165, 250, 0.25);
+  }
+  
+  /* Contact card specific hover */
+  .contact-card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1);
+    border: 2px solid transparent;
+  }
+  
+  .contact-card-hover:hover {
+    transform: scale(1.02);
+    border-color: #3b82f6;
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.1), 0 10px 10px -5px rgba(59, 130, 246, 0.04);
+    z-index: 10;
+  }
+  
+  .dark .contact-card-hover:hover {
+    border-color: #60a5fa;
+    box-shadow: 0 20px 25px -5px rgba(96, 165, 250, 0.2), 0 10px 10px -5px rgba(96, 165, 250, 0.1);
+  }
+}

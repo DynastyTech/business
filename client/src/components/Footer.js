@@ -1,0 +1,221 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Code, 
+  Mail, 
+  Github, 
+  Linkedin, 
+  MapPin, 
+  ArrowUp,
+  Heart
+} from 'lucide-react';
+import ThemeToggle from './ThemeToggle';
+
+const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const currentYear = new Date().getFullYear();
+
+  const footerLinks = {
+    company: [
+      { name: 'About Us', href: '#about' },
+      { name: 'Our Services', href: '#services' },
+      { name: 'Projects', href: '#projects' },
+      { name: 'Contact', href: '#contact' }
+    ],
+    services: [
+      'Web Development',
+      'Mobile Apps',
+      'AI Consulting',
+      'Data Engineering',
+      'Cloud Solutions',
+      'Custom Software'
+    ],
+    contact: [
+      { icon: Mail, text: 'lraseemela@gmail.com', href: 'mailto:lraseemela@gmail.com' },
+      { icon: MapPin, text: 'Sandton, Gauteng, South Africa', href: null },
+      { icon: Github, text: '@HackerWithDrip', href: 'https://github.com/HackerWithDrip' },
+      { icon: Linkedin, text: 'Lionel Raseemela', href: 'https://www.linkedin.com/in/lionel-raseemela-46090ab9/' }
+    ]
+  };
+
+  return (
+    <footer className="bg-secondary-900 dark:bg-gray-950 text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}></div>
+      </div>
+
+      <div className="container-custom relative z-10">
+        {/* Main Footer Content */}
+        <div className="py-16">
+          <div className="grid lg:grid-cols-4 gap-8">
+            {/* Company Info */}
+            <div className="lg:col-span-2">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="mb-6"
+              >
+                <div className="flex items-center space-x-3 mb-4">
+                  <Code className="w-8 h-8 text-primary-400" />
+                  <span className="text-2xl font-bold text-white">
+                    Dynasty Tech
+                  </span>
+                </div>
+                <p className="text-secondary-300 leading-relaxed max-w-md">
+                  Transforming businesses through innovative technology solutions. We deliver 
+                  cutting-edge software development, AI consulting, and digital transformation 
+                  services that drive unprecedented growth.
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="space-y-3"
+              >
+                {footerLinks.contact.map((contact, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <contact.icon className="w-5 h-5 text-primary-400 flex-shrink-0" />
+                    {contact.href ? (
+                      <a
+                        href={contact.href}
+                        target={contact.href.startsWith('http') ? "_blank" : "_self"}
+                        rel={contact.href.startsWith('http') ? "noopener noreferrer" : ""}
+                        className="text-secondary-300 hover:text-primary-400 transition-colors duration-300"
+                      >
+                        {contact.text}
+                      </a>
+                    ) : (
+                      <span className="text-secondary-300">
+                        {contact.text}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* Company Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <h3 className="text-lg font-semibold text-white mb-4">Company</h3>
+              <ul className="space-y-2">
+                {footerLinks.company.map((link, index) => (
+                  <li key={index}>
+                    <a
+                      href={link.href}
+                      className="text-secondary-300 hover:text-primary-400 transition-colors duration-300"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Services */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
+              <ul className="space-y-2">
+                {footerLinks.services.map((service, index) => (
+                  <li key={index}>
+                    <span className="text-secondary-300">
+                      {service}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-secondary-700"></div>
+
+        {/* Bottom Footer */}
+        <div className="py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              className="text-center md:text-left"
+            >
+              <p className="text-secondary-400 text-sm">
+                © {currentYear} Dynasty Tech Solutions & Consulting Pty Ltd. All rights reserved.
+              </p>
+              <p className="text-secondary-500 text-xs mt-1">
+                Made with <Heart className="inline w-3 h-3 text-red-400" /> in South Africa
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="flex items-center space-x-6"
+            >
+              <a
+                href="https://github.com/HackerWithDrip"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary-400 hover:text-primary-400 transition-colors duration-300"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/lionel-raseemela-46090ab9/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-secondary-400 hover:text-primary-400 transition-colors duration-300"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a
+                href="mailto:lraseemela@gmail.com"
+                className="text-secondary-400 hover:text-primary-400 transition-colors duration-300"
+              >
+                <Mail className="w-5 h-5" />
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </div>
+
+      {/* Theme Toggle Button */}
+      <div className="fixed bottom-24 right-8 z-50">
+        <ThemeToggle />
+      </div>
+
+      {/* Scroll to Top Button */}
+      <motion.button
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        transition={{ duration: 0.3, delay: 0.8 }}
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-primary-600 to-accent-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center"
+      >
+        <ArrowUp className="w-6 h-6" />
+      </motion.button>
+    </footer>
+  );
+};
+
+export default Footer;
