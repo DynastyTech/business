@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Play, Star, Users, Code, Zap } from 'lucide-react';
+import { ArrowRight, Play, Users, Code, Star, Zap } from 'lucide-react';
 
 const Hero = () => {
   const containerVariants = {
@@ -49,19 +49,10 @@ const Hero = () => {
           animate="visible"
           className="text-center max-w-4xl mx-auto"
         >
-          {/* Badge */}
-          <motion.div
-            variants={itemVariants}
-            className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6"
-          >
-            <Star className="w-4 h-4 mr-2" />
-            Trusted by 30+ Businesses Worldwide
-          </motion.div>
-
           {/* Main Heading */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-secondary-900 dark:text-white mb-6 leading-tight"
+            className="text-2xl sm:text-5xl lg:text-3xl xl:text-5xl font-bold text-secondary-900 dark:text-white mb-6 leading-tight"
           >
             Transforming Businesses Through
             <span className="gradient-text block">Innovative Technology</span>

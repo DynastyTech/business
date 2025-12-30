@@ -11,8 +11,7 @@ import {
   Database, 
   Cloud, 
   Shield, 
-  Zap,
-  ArrowRight
+  Zap
 } from 'lucide-react';
 
 // Import Swiper styles
@@ -140,12 +139,6 @@ const Services = () => {
                   {/* Icon Header */}
                   <div className="service-icon-container">
                     <service.icon />
-                    <div className="service-icon-overlay">
-                      <button className="btn">
-                        Learn More
-                        <ArrowRight size={16} />
-                      </button>
-                    </div>
                   </div>
 
                   {/* Content */}

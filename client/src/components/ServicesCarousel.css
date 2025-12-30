@@ -60,45 +60,6 @@
   transform: scale(1.2);
 }
 
-.service-icon-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.service-card-carousel:hover .service-icon-overlay {
-  opacity: 1;
-}
-
-.service-icon-overlay .btn {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #14b8a6, #3b82f6);
-  color: white;
-  border: none;
-  border-radius: 9999px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
-}
-
-.service-icon-overlay .btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
-}
-
 .service-info {
   padding: 1.5rem;
   flex: 1;
@@ -212,6 +173,25 @@
 .services-swiper .swiper-slide-shadow-right {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent);
   border-radius: 16px;
+}
+
+/* Grey out non-focused slides */
+.services-swiper .swiper-slide {
+  opacity: 0.4;
+  filter: grayscale(70%);
+  transition: all 0.4s ease;
+}
+
+.services-swiper .swiper-slide-active {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* Slightly visible adjacent slides */
+.services-swiper .swiper-slide-prev,
+.services-swiper .swiper-slide-next {
+  opacity: 0.6;
+  filter: grayscale(40%);
 }
 
 /* Mobile Responsive */
