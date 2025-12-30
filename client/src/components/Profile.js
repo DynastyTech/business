@@ -8,7 +8,8 @@ const Profile = () => {
   const navigate = useNavigate();
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    threshold: 0,
+    rootMargin: '50px 0px',
   });
 
   const containerVariants = {
@@ -165,8 +166,8 @@ const Profile = () => {
   ];
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-      <div className="container-custom py-16">
+    <section className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-20 lg:pt-24">
+      <div className="container-custom py-8 lg:py-16">
         {/* Back Button */}
         <motion.button
           initial={{ opacity: 0, x: -20 }}
