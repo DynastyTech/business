@@ -43,7 +43,6 @@ const Skills = () => {
     {
       icon: Code,
       title: "Programming Languages",
-      color: "from-blue-500 to-cyan-500",
       skills: [
         { name: "Java", level: 95, years: "4+ years" },
         { name: "C#", level: 90, years: "3+ years" },
@@ -56,7 +55,6 @@ const Skills = () => {
     {
       icon: Globe,
       title: "Web Technologies",
-      color: "from-green-500 to-emerald-500",
       skills: [
         { name: "HTML5", level: 95, years: "4+ years" },
         { name: "CSS3", level: 90, years: "4+ years" },
@@ -68,7 +66,6 @@ const Skills = () => {
     {
       icon: Smartphone,
       title: "Mobile Development",
-      color: "from-purple-500 to-pink-500",
       skills: [
         { name: "Flutter", level: 88, years: "2+ years" },
         { name: "Android Studio", level: 80, years: "2+ years" },
@@ -78,7 +75,6 @@ const Skills = () => {
     {
       icon: Database,
       title: "Databases & Data",
-      color: "from-indigo-500 to-blue-500",
       skills: [
         { name: "MySQL", level: 90, years: "3+ years" },
         { name: "PostgreSQL", level: 85, years: "3+ years" },
@@ -90,7 +86,6 @@ const Skills = () => {
     {
       icon: Cloud,
       title: "Cloud & DevOps",
-      color: "from-yellow-500 to-orange-500",
       skills: [
         { name: "AWS", level: 85, years: "2+ years" },
         { name: "EC2 & S3", level: 80, years: "2+ years" },
@@ -101,7 +96,6 @@ const Skills = () => {
     {
       icon: Brain,
       title: "AI & Machine Learning",
-      color: "from-red-500 to-pink-500",
       skills: [
         { name: "Machine Learning", level: 80, years: "2+ years" },
         { name: "Data Science", level: 75, years: "2+ years" },
@@ -111,7 +105,6 @@ const Skills = () => {
     {
       icon: Shield,
       title: "Cybersecurity",
-      color: "from-gray-500 to-slate-500",
       skills: [
         { name: "Ethical Hacking", level: 85, years: "3+ years" },
         { name: "Security Testing", level: 80, years: "2+ years" },
@@ -121,7 +114,6 @@ const Skills = () => {
     {
       icon: Server,
       title: "Tools & Platforms",
-      color: "from-teal-500 to-cyan-500",
       skills: [
         { name: "Git & GitHub", level: 92, years: "4+ years" },
         { name: "VS Code", level: 90, years: "4+ years" },
@@ -185,7 +177,7 @@ const Skills = () => {
               transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
               className="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-20 h-20 icon-gradient-box mx-auto mb-6">
                 <area.icon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-xl font-bold text-secondary-900 mb-4">
@@ -212,7 +204,7 @@ const Skills = () => {
               className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg skill-card-hover"
             >
               {/* Category Header */}
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${category.color} flex items-center justify-center mb-6`}>
+              <div className="w-16 h-16 icon-gradient-box mb-6">
                 <category.icon className="w-8 h-8 text-white" />
               </div>
               
@@ -244,7 +236,7 @@ const Skills = () => {
                         initial={{ width: 0 }}
                         animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
                         transition={{ duration: 1, delay: 1.0 + index * 0.1 + skillIndex * 0.05 }}
-                        className={`h-2 rounded-full bg-gradient-to-r ${category.color}`}
+                        className="h-2 rounded-full bg-gradient-to-r from-teal-400 via-blue-500 to-amber-400"
                       />
                     </div>
                     
@@ -296,25 +288,6 @@ const Skills = () => {
           </div>
         </motion.div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 1.8 }}
-          className="text-center mt-16"
-        >
-          <p className="text-lg text-secondary-600 mb-6">
-            Ready to leverage our technical expertise for your next project?
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-            className="btn-primary text-lg px-8 py-4"
-          >
-            Start Your Project
-          </motion.button>
-        </motion.div>
       </div>
     </section>
   );

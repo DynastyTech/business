@@ -7,7 +7,9 @@ import {
   Linkedin, 
   MapPin, 
   ArrowUp,
-  Heart
+  Heart,
+  Phone,
+  MessageCircle
 } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
@@ -35,8 +37,9 @@ const Footer = () => {
     ],
     contact: [
       { icon: Mail, text: 'lraseemela@gmail.com', href: 'mailto:lraseemela@gmail.com' },
+      { icon: Phone, text: '+27 72 900 3705', href: 'tel:+27729003705' },
       { icon: MapPin, text: 'Sandton, Gauteng, South Africa', href: null },
-      { icon: Github, text: '@HackerWithDrip', href: 'https://github.com/HackerWithDrip' },
+      { icon: Github, text: '@DynastyTech', href: 'https://github.com/DynastyTech' },
       { icon: Linkedin, text: 'Lionel Raseemela', href: 'https://www.linkedin.com/in/lionel-raseemela-46090ab9/' }
     ]
   };
@@ -63,7 +66,9 @@ const Footer = () => {
                 className="mb-6"
               >
                 <div className="flex items-center space-x-3 mb-4">
-                  <Code className="w-8 h-8 text-primary-400" />
+                  <div className="w-10 h-10 icon-gradient-box">
+                    <Code className="w-5 h-5 text-white" />
+                  </div>
                   <span className="text-2xl font-bold text-white">
                     Dynasty Tech
                   </span>
@@ -83,7 +88,9 @@ const Footer = () => {
               >
                 {footerLinks.contact.map((contact, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <contact.icon className="w-5 h-5 text-primary-400 flex-shrink-0" />
+                    <div className="w-8 h-8 icon-gradient-box flex-shrink-0">
+                      <contact.icon className="w-4 h-4 text-white" />
+                    </div>
                     {contact.href ? (
                       <a
                         href={contact.href}
@@ -159,9 +166,7 @@ const Footer = () => {
               <p className="text-secondary-400 text-sm">
                 © {currentYear} Dynasty Tech Solutions & Consulting Pty Ltd. All rights reserved.
               </p>
-              <p className="text-secondary-500 text-xs mt-1">
-                Made with <Heart className="inline w-3 h-3 text-red-400" /> in South Africa
-              </p>
+              
             </motion.div>
 
             <motion.div
@@ -171,7 +176,7 @@ const Footer = () => {
               className="flex items-center space-x-6"
             >
               <a
-                href="https://github.com/HackerWithDrip"
+                href="https://github.com/DynastyTech"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-secondary-400 hover:text-primary-400 transition-colors duration-300"
@@ -197,6 +202,25 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* WhatsApp Floating Button */}
+      <motion.a
+        href="https://wa.me/27729003705"
+        target="_blank"
+        rel="noopener noreferrer"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        transition={{ duration: 0.3 }}
+        className="fixed bottom-40 right-8 w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center group"
+        title="Chat on WhatsApp"
+      >
+        <MessageCircle className="w-7 h-7" />
+        <span className="absolute right-16 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+          Chat on WhatsApp
+        </span>
+      </motion.a>
+
       {/* Theme Toggle Button */}
       <div className="fixed bottom-24 right-8 z-50">
         <ThemeToggle />
@@ -210,7 +234,7 @@ const Footer = () => {
         whileTap={{ scale: 0.9 }}
         transition={{ duration: 0.3, delay: 0.8 }}
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-primary-600 to-accent-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center"
+        className="fixed bottom-8 right-8 w-12 h-12 icon-gradient text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center"
       >
         <ArrowUp className="w-6 h-6" />
       </motion.button>

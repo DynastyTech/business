@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Code, ChevronDown } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,18 +19,34 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '#home', isPage: false },
+    { name: 'About', href: '#about', isPage: false },
+    { name: 'Services', href: '#services', isPage: false },
+    { name: 'Projects', href: '/projects', isPage: true },
+    { name: 'Skills', href: '/skills', isPage: true },
+    { name: 'Contact', href: '/contact', isPage: true },
   ];
 
-  const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavigation = (item) => {
+    if (item.isPage) {
+      navigate(item.href);
+    } else {
+      // If we're not on the home page, navigate there first
+      if (location.pathname !== '/') {
+        navigate('/');
+        // Wait for navigation, then scroll
+        setTimeout(() => {
+          const element = document.querySelector(item.href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      } else {
+        const element = document.querySelector(item.href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
     }
     setIsOpen(false);
   };
@@ -46,15 +65,18 @@ const Navbar = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo - Far Left */}
-          <motion.div
+          <motion.button
             whileHover={{ scale: 1.05 }}
+            onClick={() => navigate('/')}
             className="flex items-center space-x-2 flex-shrink-0"
           >
-            <Code className="h-8 w-8 text-primary-600" />
+            <div className="w-10 h-10 icon-gradient-box">
+              <Code className="h-5 w-5 text-white" />
+            </div>
             <span className="text-xl lg:text-2xl font-bold text-primary-600">
               Dynasty Tech
             </span>
-          </motion.div>
+          </motion.button>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
@@ -63,7 +85,7 @@ const Navbar = () => {
                 key={item.name}
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavigation(item)}
                 className="text-secondary-700 dark:text-gray-300 hover:text-primary-600 font-medium transition-colors duration-200"
               >
                 {item.name}
@@ -72,7 +94,7 @@ const Navbar = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => scrollToSection('#contact')}
+              onClick={() => navigate('/contact')}
               className="btn-primary"
             >
               Get Started
@@ -104,7 +126,7 @@ const Navbar = () => {
                   <motion.button
                     key={item.name}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => scrollToSection(item.href)}
+                    onClick={() => handleNavigation(item)}
                     className="block w-full text-left px-4 py-3 text-secondary-700 dark:text-gray-300 hover:text-primary-600 hover:bg-secondary-50 dark:hover:bg-gray-700 font-medium transition-colors duration-200"
                   >
                     {item.name}
@@ -113,7 +135,7 @@ const Navbar = () => {
                 <div className="px-4 pt-2">
                   <motion.button
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => scrollToSection('#contact')}
+                    onClick={() => navigate('/contact')}
                     className="w-full btn-primary"
                   >
                     Get Started

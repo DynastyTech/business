@@ -127,7 +127,9 @@ const About = () => {
                   transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
                   className="text-center p-4 rounded-lg bg-primary-50 dark:bg-gray-800 card-hover-enhanced"
                 >
-                  <highlight.icon className="w-8 h-8 text-primary-600 mx-auto mb-2" />
+                  <div className="w-12 h-12 icon-gradient-box mx-auto mb-2">
+                    <highlight.icon className="w-6 h-6 text-white" />
+                  </div>
                   <h4 className="font-semibold text-secondary-800 dark:text-white mb-1 text-sm">
                     {highlight.title}
                   </h4>
@@ -159,7 +161,7 @@ const About = () => {
                   <div className="w-full h-full bg-white rounded-full p-2">
                     <div className="w-full h-full bg-gradient-to-br from-primary-100 to-accent-100 rounded-full flex items-center justify-center">
                       <div className="text-center">
-                        <div className="w-24 h-24 bg-gradient-to-br from-primary-600 to-accent-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <div className="w-24 h-24 icon-gradient rounded-full mx-auto mb-4 flex items-center justify-center">
                           <Users className="w-12 h-12 text-white" />
                         </div>
                         <h3 className="text-xl font-bold text-secondary-800 dark:text-white">Lionel Raseemela</h3>
@@ -193,7 +195,9 @@ const About = () => {
                     transition={{ duration: 0.4, delay: 1.0 + index * 0.1 }}
                     className="flex items-center space-x-3 p-3 rounded-lg bg-secondary-50 dark:bg-gray-800 card-hover-enhanced"
                   >
-                    <value.icon className="w-6 h-6 text-primary-600 flex-shrink-0" />
+                    <div className="w-10 h-10 icon-gradient-box flex-shrink-0">
+                      <value.icon className="w-5 h-5 text-white" />
+                    </div>
                     <div>
                       <h4 className="font-semibold text-secondary-800 dark:text-white text-sm">
                         {value.title}

@@ -46,43 +46,37 @@ const Services = () => {
       icon: Globe,
       title: "Full-Stack Web Development",
       description: "Complete web applications with modern frameworks, responsive design, and scalable architecture. Delivered within 7 days guaranteed.",
-      features: ["React, Angular, Node.js", "Responsive Design", "SEO Optimization", "Performance Tuning", "7-Day Delivery Guarantee"],
-      color: "from-blue-500 to-cyan-500"
+      features: ["React, Angular, Node.js", "Responsive Design", "SEO Optimization", "Performance Tuning", "7-Day Delivery Guarantee"]
     },
     {
       icon: Smartphone,
       title: "Mobile App Development",
       description: "Native iOS and Android applications with cross-platform solutions using Flutter and React Native.",
-      features: ["iOS & Android Apps", "Flutter Development", "React Native", "App Store Optimization"],
-      color: "from-green-500 to-emerald-500"
+      features: ["iOS & Android Apps", "Flutter Development", "React Native", "App Store Optimization"]
     },
     {
       icon: Brain,
       title: "AI & Machine Learning",
       description: "Custom AI solutions, machine learning models, and intelligent automation for business processes.",
-      features: ["Custom AI Models", "Machine Learning", "Process Automation", "Data Analytics"],
-      color: "from-purple-500 to-pink-500"
+      features: ["Custom AI Models", "Machine Learning", "Process Automation", "Data Analytics"]
     },
     {
       icon: Users,
       title: "Technology Consulting",
       description: "Strategic technology guidance to help businesses grow and adopt cutting-edge solutions.",
-      features: ["Digital Transformation", "Technology Strategy", "Process Optimization", "Team Training"],
-      color: "from-orange-500 to-red-500"
+      features: ["Digital Transformation", "Technology Strategy", "Process Optimization", "Team Training"]
     },
     {
       icon: Database,
       title: "Data Engineering",
       description: "Data infrastructure, analytics platforms, and business intelligence solutions.",
-      features: ["Data Warehousing", "ETL Pipelines", "Business Intelligence", "Data Visualization"],
-      color: "from-indigo-500 to-blue-500"
+      features: ["Data Warehousing", "ETL Pipelines", "Business Intelligence", "Data Visualization"]
     },
     {
       icon: Cloud,
       title: "Cloud Solutions",
       description: "AWS cloud infrastructure, DevOps automation, and scalable cloud architecture.",
-      features: ["AWS Services", "DevOps Automation", "CI/CD Pipelines", "Infrastructure as Code"],
-      color: "from-yellow-500 to-orange-500"
+      features: ["AWS Services", "DevOps Automation", "CI/CD Pipelines", "Infrastructure as Code"]
     }
   ];
 
@@ -135,7 +129,7 @@ const Services = () => {
             >
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg service-card-hover h-full border border-secondary-100 dark:border-gray-700">
                 {/* Icon */}
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className="w-16 h-16 icon-gradient-box mb-6 group-hover:scale-110 transition-transform duration-300">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
 
@@ -189,7 +183,7 @@ const Services = () => {
                 transition={{ duration: 0.6, delay: 1.0 + index * 0.2 }}
                 className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border-2 border-accent-200 dark:border-accent-600 service-card-hover"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-accent-400 to-accent-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-20 h-20 icon-gradient-box mx-auto mb-6">
                   <service.icon className="w-10 h-10 text-white" />
                 </div>
                 <h4 className="text-xl font-bold text-secondary-900 dark:text-white mb-4">
@@ -242,28 +236,6 @@ const Services = () => {
           </p>
         </motion.div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 1.4 }}
-          className="text-center bg-gradient-to-r from-primary-600 to-accent-600 rounded-3xl p-12 text-white"
-        >
-          <h3 className="text-3xl font-bold mb-4">
-            Ready to Transform Your Business?
-          </h3>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our innovative solutions can revolutionize your industry and drive unprecedented growth.
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-            className="bg-white text-primary-600 font-bold py-4 px-8 rounded-xl text-lg hover:shadow-2xl transition-all duration-300"
-          >
-            Start Your Transformation
-          </motion.button>
-        </motion.div>
       </div>
     </section>
   );

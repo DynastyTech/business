@@ -27,9 +27,9 @@ const Hero = () => {
   };
 
   const stats = [
-    { icon: Users, value: "50+", label: "Happy Clients" },
-    { icon: Code, value: "100+", label: "Projects Completed" },
-    { icon: Star, value: "5.0", label: "Client Rating" },
+    { icon: Users, value: "30+", label: "Happy Clients" },
+    { icon: Code, value: "50+", label: "Projects Completed" },
+    { icon: Star, value: "4.8", label: "Client Rating" },
     { icon: Zap, value: "24/7", label: "Support" },
   ];
 
@@ -55,7 +55,7 @@ const Hero = () => {
             className="inline-flex items-center px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6"
           >
             <Star className="w-4 h-4 mr-2" />
-            Trusted by 50+ Businesses Worldwide
+            Trusted by 30+ Businesses Worldwide
           </motion.div>
 
           {/* Main Heading */}
@@ -119,7 +119,9 @@ const Hero = () => {
                 className="text-center"
               >
                 <div className="flex justify-center mb-2">
-                  <stat.icon className="w-8 h-8 text-primary-600" />
+                  <div className="w-14 h-14 icon-gradient-box">
+                    <stat.icon className="w-7 h-7 text-white" />
+                  </div>
                 </div>
                 <div className="text-2xl lg:text-3xl font-bold text-secondary-900 dark:text-white mb-1">
                   {stat.value}

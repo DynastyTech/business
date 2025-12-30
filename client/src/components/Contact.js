@@ -81,29 +81,31 @@ const Contact = () => {
       icon: Mail,
       title: "Email",
       value: "lraseemela@gmail.com",
-      link: "mailto:lraseemela@gmail.com",
-      color: "from-blue-500 to-cyan-500"
+      link: "mailto:lraseemela@gmail.com"
+    },
+    {
+      icon: Phone,
+      title: "Phone / WhatsApp",
+      value: "+27 72 900 3705",
+      link: "tel:+27729003705"
     },
     {
       icon: Github,
       title: "GitHub",
-      value: "@HackerWithDrip",
-      link: "https://github.com/HackerWithDrip",
-      color: "from-gray-700 to-gray-900"
+      value: "@DynastyTech",
+      link: "https://github.com/DynastyTech"
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
       value: "Lionel Raseemela",
-      link: "https://www.linkedin.com/in/lionel-raseemela-46090ab9/",
-      color: "from-blue-600 to-blue-800"
+      link: "https://www.linkedin.com/in/lionel-raseemela-46090ab9/"
     },
     {
       icon: MapPin,
       title: "Location",
       value: "Sandton, Gauteng, South Africa",
-      link: null,
-      color: "from-green-500 to-emerald-500"
+      link: null
     }
   ];
 
@@ -280,7 +282,7 @@ const Contact = () => {
                   From web applications to AI-powered systems, we deliver quality that exceeds expectations.
                 </p>
                 <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 icon-gradient-box">
                     <span className="text-white font-bold text-lg">DT</span>
                   </div>
                   <div>
@@ -304,7 +306,7 @@ const Contact = () => {
                       transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
                       className="flex items-center space-x-4"
                     >
-                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${info.color} flex items-center justify-center flex-shrink-0`}>
+                      <div className="w-12 h-12 icon-gradient-box flex-shrink-0">
                         <info.icon className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
@@ -372,42 +374,6 @@ const Contact = () => {
           </motion.div>
         </motion.div>
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-          className="text-center mt-16"
-        >
-          <h3 className="text-2xl font-bold text-secondary-900 mb-4">
-            Ready to Transform Your Business?
-          </h3>
-          <p className="text-lg text-secondary-600 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our innovative solutions can revolutionize your industry 
-            and drive unprecedented growth for your organization.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-              className="btn-primary text-lg px-8 py-4"
-            >
-              Start Your Project
-            </motion.button>
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="https://github.com/HackerWithDrip"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary text-lg px-8 py-4 flex items-center"
-            >
-              <Github className="w-5 h-5 mr-2" />
-              View GitHub
-            </motion.a>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

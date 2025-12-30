@@ -45,7 +45,7 @@ const Projects = () => {
       technologies: ["Flutter", "Dart", "NewsAPI", "Mobile Development"],
       category: "Mobile App",
       icon: Newspaper,
-      github: "https://github.com/HackerWithDrip/Mzansi_News_App",
+      github: "https://github.com/DynastyTech/Mzansi_News_App",
       live: null,
       featured: true
     },
@@ -56,7 +56,7 @@ const Projects = () => {
       technologies: ["Java", "Game Development", "Object-Oriented Programming", "Swing UI"],
       category: "Game Development",
       icon: Gamepad2,
-      github: "https://github.com/HackerWithDrip/SOS-Game",
+      github: "https://github.com/DynastyTech/SOS-Game",
       live: null,
       featured: true
     },
@@ -207,7 +207,9 @@ const Projects = () => {
                 {/* Project Content */}
                 <div className="p-6">
                   <div className="flex items-center mb-3">
-                    <project.icon className="w-5 h-5 text-primary-600 mr-2" />
+                    <div className="w-8 h-8 icon-gradient-box mr-2 flex-shrink-0">
+                      <project.icon className="w-4 h-4 text-white" />
+                    </div>
                     <h3 className="text-xl font-bold text-secondary-900 dark:text-white group-hover:text-primary-600 transition-colors duration-300">
                       {project.title}
                     </h3>

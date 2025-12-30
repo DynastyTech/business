@@ -3,41 +3,329 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Dynasty Tech Solutions & Consulting Pty Ltd - Professional software development, web applications, mobile apps, and AI consulting services. Quality solutions for businesses worldwide."
-    />
-    <meta name="keywords" content="software development, web development, mobile apps, AI consulting, tech consulting, South Africa, Johannesburg" />
-    <meta name="author" content="Lionel Raseemela" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1e3a5f" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Dynasty Tech Solutions</title>
+    <meta name="title" content="Affordable Website & App Development South Africa | Dynasty Tech Solutions" />
+    <meta name="description" content="Looking for cheap website development in South Africa? Dynasty Tech Solutions offers affordable web design, mobile app development & AI consulting across Johannesburg, Cape Town, Durban & all provinces. Get your professional website in just 7 days - quality guaranteed!" />
+    <meta name="keywords" content="cheap website South Africa, affordable web development, cheap website builder South Africa, budget website design, cheap mobile app development, affordable app developer South Africa, cheap application development, low cost website design, cheap web developer Johannesburg, affordable website Cape Town, cheap website Durban, budget web design Pretoria, cheap website development Gauteng, affordable web developer Western Cape, cheap app developer KwaZulu-Natal, budget website Eastern Cape, cheap website Free State, affordable web design Limpopo, cheap website Mpumalanga, budget app development North West, cheap website Northern Cape, software development South Africa, web development Johannesburg, mobile app development, AI consulting, tech solutions, React developer, full-stack developer, digital transformation, Sandton tech company, 7 day website, fast website delivery, quick website builder, professional website cheap, small business website South Africa, startup website development, ecommerce website South Africa, online store development, web application development, custom software cheap, IT solutions South Africa, tech consulting affordable, website developer near me, app developer near me, best web developer South Africa, top app developer Johannesburg, quality website affordable price" />
+    <meta name="author" content="Lionel Raseemela - Dynasty Tech Solutions" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://dynastytechsolutions.co.za/" />
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="coverage" content="South Africa" />
+    <meta name="distribution" content="South Africa" />
+    <meta name="target" content="all" />
+    <meta name="audience" content="all" />
+    <meta name="rating" content="general" />
+    
+    <!-- Performance: Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://wa.me" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://dynastytechsolutions.co.za/" />
-    <meta property="og:title" content="Dynasty Tech Solutions & Consulting" />
-    <meta property="og:description" content="Professional software development, web applications, mobile apps, and AI consulting services." />
+    <meta property="og:title" content="Affordable Website & App Development | Dynasty Tech Solutions South Africa" />
+    <meta property="og:description" content="Cheap website development across South Africa! Professional websites in 7 days. Affordable web design, mobile apps & AI consulting in Johannesburg, Cape Town, Durban & all provinces. Quality guaranteed!" />
     <meta property="og:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Dynasty Tech Solutions - Affordable Website Development South Africa" />
+    <meta property="og:site_name" content="Dynasty Tech Solutions" />
+    <meta property="og:locale" content="en_ZA" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://dynastytechsolutions.co.za/" />
-    <meta property="twitter:title" content="Dynasty Tech Solutions & Consulting" />
-    <meta property="twitter:description" content="Professional software development, web applications, mobile apps, and AI consulting services." />
-    <meta property="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://dynastytechsolutions.co.za/" />
+    <meta name="twitter:title" content="Affordable Website & App Development South Africa | Dynasty Tech" />
+    <meta name="twitter:description" content="Looking for cheap website development? Get professional websites in 7 days! Serving Johannesburg, Cape Town, Durban & all SA provinces. Affordable quality!" />
+    <meta name="twitter:image" content="%PUBLIC_URL%/og-image.jpg" />
+    <meta name="twitter:creator" content="@DynastyTech" />
 
+    <!-- Geographic & Business Meta -->
+    <meta name="geo.region" content="ZA-GP" />
+    <meta name="geo.placename" content="Sandton, Johannesburg" />
+    <meta name="geo.position" content="-26.1076;28.0567" />
+    <meta name="ICBM" content="-26.1076, 28.0567" />
+    
+    <!-- Mobile App Meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Dynasty Tech" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=yes" />
+
+    <!-- App Icons -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Fonts with display=swap for better performance -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
     
-    <title>Dynasty Tech Solutions & Consulting | Professional Software Development & AI Consulting</title>
+    <!-- Structured Data - Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Dynasty Tech Solutions & Consulting",
+      "alternateName": "Dynasty Tech",
+      "url": "https://dynastytechsolutions.co.za",
+      "logo": "https://dynastytechsolutions.co.za/logo192.png",
+      "description": "Professional software development, web applications, mobile apps, and AI consulting services in South Africa.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sandton",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+27-72-900-3705",
+        "contactType": "sales",
+        "email": "lraseemela@gmail.com",
+        "availableLanguage": ["English"]
+      },
+      "sameAs": [
+        "https://github.com/DynastyTech",
+        "https://www.linkedin.com/in/lionel-raseemela-46090ab9/"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Lionel Raseemela",
+        "jobTitle": "Founder & CEO"
+      }
+    }
+    </script>
+
+    <!-- Structured Data - Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Dynasty Tech Solutions",
+      "image": "https://dynastytechsolutions.co.za/logo192.png",
+      "priceRange": "$",
+      "description": "Affordable website development, cheap mobile app development, and budget-friendly AI consulting services across South Africa",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sandton",
+        "addressRegion": "Gauteng",
+        "addressCountry": "South Africa"
+      },
+      "telephone": "+27729003705",
+      "email": "lraseemela@gmail.com",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      "areaServed": [
+        {"@type": "State", "name": "Gauteng", "containedInPlace": {"@type": "Country", "name": "South Africa"}},
+        {"@type": "State", "name": "Western Cape", "containedInPlace": {"@type": "Country", "name": "South Africa"}},
+        {"@type": "State", "name": "KwaZulu-Natal", "containedInPlace": {"@type": "Country", "name": "South Africa"}},
+        {"@type": "State", "name": "Eastern Cape", "containedInPlace": {"@type": "Country", "name": "South Africa"}},
+        {"@type": "State", "name": "Free State", "containedInPlace": {"@type": "Country", "name": "South Africa"}},
+        {"@type": "State", "name": "Limpopo", "containedInPlace": {"@type": "Country", "name": "South Africa"}},
+        {"@type": "State", "name": "Mpumalanga", "containedInPlace": {"@type": "Country", "name": "South Africa"}},
+        {"@type": "State", "name": "North West", "containedInPlace": {"@type": "Country", "name": "South Africa"}},
+        {"@type": "State", "name": "Northern Cape", "containedInPlace": {"@type": "Country", "name": "South Africa"}},
+        {"@type": "City", "name": "Johannesburg"},
+        {"@type": "City", "name": "Cape Town"},
+        {"@type": "City", "name": "Durban"},
+        {"@type": "City", "name": "Pretoria"},
+        {"@type": "City", "name": "Port Elizabeth"},
+        {"@type": "City", "name": "Bloemfontein"},
+        {"@type": "City", "name": "Polokwane"},
+        {"@type": "City", "name": "Nelspruit"},
+        {"@type": "City", "name": "Kimberley"},
+        {"@type": "City", "name": "East London"},
+        {"@type": "City", "name": "Rustenburg"},
+        {"@type": "City", "name": "Pietermaritzburg"},
+        {"@type": "City", "name": "Soweto"},
+        {"@type": "City", "name": "Sandton"},
+        {"@type": "City", "name": "Centurion"}
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Web & App Development Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Affordable Website Development",
+              "description": "Cheap professional website design and development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Budget Mobile App Development",
+              "description": "Affordable iOS and Android app development"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "7-Day Website Delivery",
+              "description": "Fast website delivery in just 7 days guaranteed"
+            }
+          }
+        ]
+      },
+      "serviceType": ["Cheap Website Development", "Affordable Web Design", "Budget Mobile App Development", "Low Cost Application Development", "Affordable AI Consulting", "Quick Website Builder", "Fast Web Development", "Small Business Website", "Startup Website Development", "Ecommerce Website Development"]
+    }
+    </script>
+
+    <!-- Structured Data - Website -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Dynasty Tech Solutions",
+      "url": "https://dynastytechsolutions.co.za",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://dynastytechsolutions.co.za/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Structured Data - Services Offered -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Affordable Tech Services in South Africa",
+      "description": "Cheap website development, affordable app development, and budget-friendly tech solutions across all South African provinces",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "Cheap Website Development South Africa",
+            "description": "Affordable professional website design and development for businesses across South Africa. Budget-friendly web solutions in Johannesburg, Cape Town, Durban, Pretoria, and all provinces.",
+            "provider": {"@type": "Organization", "name": "Dynasty Tech Solutions"},
+            "areaServed": "South Africa",
+            "serviceType": "Website Development"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Service",
+            "name": "Affordable Mobile App Development",
+            "description": "Budget mobile application development for iOS and Android. Cheap app developer serving Gauteng, Western Cape, KwaZulu-Natal, and all SA provinces.",
+            "provider": {"@type": "Organization", "name": "Dynasty Tech Solutions"},
+            "areaServed": "South Africa",
+            "serviceType": "Mobile App Development"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Service",
+            "name": "7-Day Website Delivery",
+            "description": "Fast, cheap website creation with guaranteed 7-day delivery. Quick website builder for small businesses and startups in South Africa.",
+            "provider": {"@type": "Organization", "name": "Dynasty Tech Solutions"},
+            "areaServed": "South Africa",
+            "serviceType": "Fast Web Development"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Service",
+            "name": "Affordable AI Consulting",
+            "description": "Budget-friendly AI and machine learning consulting services for businesses in South Africa.",
+            "provider": {"@type": "Organization", "name": "Dynasty Tech Solutions"},
+            "areaServed": "South Africa",
+            "serviceType": "AI Consulting"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Service",
+            "name": "Cheap Ecommerce Website Development",
+            "description": "Affordable online store and ecommerce website development for South African businesses. Budget-friendly shopping cart solutions.",
+            "provider": {"@type": "Organization", "name": "Dynasty Tech Solutions"},
+            "areaServed": "South Africa",
+            "serviceType": "Ecommerce Development"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Structured Data - FAQ for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a cheap website cost in South Africa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dynasty Tech Solutions offers affordable website development starting from competitive rates. We provide budget-friendly web design packages for small businesses, startups, and enterprises across South Africa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you build a website in 7 days?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Dynasty Tech Solutions guarantees professional website delivery in just 7 days. Our fast website development process ensures quality without compromising speed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer cheap mobile app development in South Africa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we offer affordable mobile app development for iOS and Android platforms. Our budget-friendly app development services are available across Johannesburg, Cape Town, Durban, and all South African provinces."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which areas in South Africa do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We serve all of South Africa including Gauteng (Johannesburg, Pretoria, Sandton), Western Cape (Cape Town), KwaZulu-Natal (Durban), Eastern Cape (Port Elizabeth), Free State (Bloemfontein), Limpopo (Polokwane), Mpumalanga (Nelspruit), North West (Rustenburg), and Northern Cape (Kimberley)."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <div style="padding: 20px; text-align: center; font-family: sans-serif;">
+        <h1>Dynasty Tech Solutions</h1>
+        <p>Please enable JavaScript to view this website.</p>
+        <p>Contact us: <a href="mailto:lraseemela@gmail.com">lraseemela@gmail.com</a> | <a href="tel:+27729003705">+27 72 900 3705</a></p>
+      </div>
+    </noscript>
     <div id="root"></div>
   </body>
 </html>

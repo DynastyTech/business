@@ -1,16 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
 import Profile from './components/Profile';
+import ContactPage from './components/ContactPage';
+import SkillsPage from './components/SkillsPage';
+import ProjectsPage from './components/ProjectsPage';
+
+// Component to scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  
+  return null;
+}
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -38,6 +49,7 @@ function App() {
 
   return (
     <ThemeProvider>
+      <ScrollToTop />
       <div className="App overflow-x-hidden">
         <Navbar />
         <Routes>
@@ -46,12 +58,12 @@ function App() {
               <Hero />
               <About />
               <Services />
-              <Projects />
-              <Skills />
-              <Contact />
             </>
           } />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/skills" element={<SkillsPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
         </Routes>
         <Footer />
       </div>
