@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Code, 
   Mail, 
   Github, 
   Linkedin, 
@@ -74,9 +73,11 @@ const Footer = () => {
                 className="mb-6"
               >
                 <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-10 h-10 icon-gradient-box">
-                    <Code className="w-5 h-5 text-white" />
-                  </div>
+                  <img 
+                    src="/logo.svg" 
+                    alt="Dynasty Tech Logo" 
+                    className="w-10 h-10 rounded-xl"
+                  />
                   <span className="text-2xl font-bold text-white">
                     Dynasty Tech
                   </span>

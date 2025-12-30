@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Code, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useTheme } from '../contexts/ThemeContext';
 
@@ -72,9 +72,11 @@ const Navbar = () => {
             onClick={() => navigate('/')}
             className="flex items-center space-x-2 flex-shrink-0"
           >
-            <div className="w-8 h-8 sm:w-10 sm:h-10 icon-gradient-box">
-              <Code className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-            </div>
+            <img 
+              src="/logo.svg" 
+              alt="Dynasty Tech Logo" 
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl"
+            />
             <span className="text-lg sm:text-xl lg:text-2xl font-bold text-primary-600">
               Dynasty Tech
             </span>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0EA5E9;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1D4ED8;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background rounded square -->
+  <rect x="10" y="10" width="180" height="180" rx="40" ry="40" fill="url(#logoGradient)"/>
+  
+  <!-- Code brackets < > representing tech/development -->
+  <g fill="white" stroke="white" stroke-width="2">
+    <!-- Left bracket < -->
+    <path d="M 75 65 L 45 100 L 75 135" fill="none" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Right bracket > -->
+    <path d="M 125 65 L 155 100 L 125 135" fill="none" stroke="white" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    
+    <!-- Forward slash / in the middle representing code -->
+    <line x1="115" y1="55" x2="85" y2="145" stroke="white" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>
+
