@@ -61,10 +61,12 @@
     font-weight: 600;
     line-height: 1.2;
     transition: color 0.3s ease;
-    /* Prevent text overflow on mobile */
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: auto;
+    /* Prevent word breaking/hyphenation on mobile for better readability */
+    overflow-wrap: normal;
+    word-wrap: normal;
+    hyphens: none;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
   }
   
   .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {

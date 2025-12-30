@@ -129,12 +129,12 @@ const Contact = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-3 sm:mb-4">
             Let's <span className="gradient-text">Connect</span>
           </h2>
-          <p className="text-lg text-secondary-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-secondary-600 dark:text-gray-300 max-w-3xl mx-auto">
             Ready to transform your business with innovative technology solutions? 
             Let's discuss your project and explore how we can help you achieve your goals.
           </p>
@@ -144,12 +144,12 @@ const Contact = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid lg:grid-cols-2 gap-12 lg:gap-16"
+          className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16"
         >
           {/* Contact Form */}
           <motion.div variants={itemVariants} className="order-2 lg:order-1">
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg contact-card-hover">
-              <h3 className="text-2xl font-bold text-secondary-900 dark:text-white mb-6">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 sm:p-8 shadow-lg contact-card-hover">
+              <h3 className="text-xl sm:text-2xl font-bold text-secondary-900 dark:text-white mb-4 sm:mb-6">
                 Start Your Project
               </h3>
 
@@ -273,9 +273,9 @@ const Contact = () => {
           <motion.div variants={itemVariants} className="order-1 lg:order-2">
             <div className="space-y-8">
               {/* Company Info */}
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg contact-card-hover">
-                <h3 className="text-2xl font-bold text-secondary-900 dark:text-white mb-6">
-                  Dynasty Tech Solutions & Consulting
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 sm:p-8 shadow-lg contact-card-hover">
+                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-900 dark:text-white mb-4 sm:mb-6">
+                  Dynasty Tech Solutions
                 </h3>
                 <p className="text-secondary-600 dark:text-gray-300 mb-6 leading-relaxed">
                   We specialize in building innovative technology solutions that drive business growth. 
@@ -293,8 +293,8 @@ const Contact = () => {
               </div>
 
               {/* Contact Details */}
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg contact-card-hover">
-                <h3 className="text-xl font-bold text-secondary-900 dark:text-white mb-6">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-5 sm:p-8 shadow-lg contact-card-hover">
+                <h3 className="text-lg sm:text-xl font-bold text-secondary-900 dark:text-white mb-4 sm:mb-6">
                   Get In Touch
                 </h3>
                 <div className="space-y-4">

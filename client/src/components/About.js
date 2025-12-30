@@ -82,12 +82,12 @@ const About = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-6"
+              className="mb-4 sm:mb-6"
             >
-              <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
-                About <span className="gradient-text">Dynasty Tech Solutions</span>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-3 sm:mb-4">
+                About <span className="gradient-text">Dynasty Tech</span>
               </h2>
-              <p className="text-lg text-secondary-600 dark:text-gray-300 leading-relaxed">
+              <p className="text-sm sm:text-base lg:text-lg text-secondary-600 dark:text-gray-300 leading-relaxed">
                 Dynasty Tech Solutions is a cutting-edge technology consulting firm that specializes 
                 in software development, AI consulting, and digital transformation. Founded by a 
                 distinguished graduate with exceptional expertise from IBM South Africa and Nelson 
@@ -99,12 +99,12 @@ const About = () => {
               initial={{ opacity: 0, x: -30 }}
               animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="mb-8"
+              className="mb-6 sm:mb-8"
             >
-              <h3 className="text-xl font-semibold text-secondary-800 dark:text-gray-200 mb-4">
+              <h3 className="text-lg sm:text-xl font-semibold text-secondary-800 dark:text-gray-200 mb-3 sm:mb-4">
                 Our Mission
               </h3>
-              <p className="text-secondary-600 dark:text-gray-300 leading-relaxed">
+              <p className="text-sm sm:text-base text-secondary-600 dark:text-gray-300 leading-relaxed">
                 To revolutionize industries through innovative technology solutions. Our commitment to quality, innovation, and 
                 client success drives everything we do.
               </p>

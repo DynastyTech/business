@@ -117,12 +117,12 @@ const Projects = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-3 sm:mb-4">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <p className="text-lg text-secondary-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-secondary-600 dark:text-gray-300 max-w-3xl mx-auto">
             Explore our portfolio of innovative projects that demonstrate our technical expertise 
             and creative problem-solving capabilities across various domains.
           </p>
@@ -133,19 +133,19 @@ const Projects = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-16"
+          className="mb-10 sm:mb-16"
         >
-          <div className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden">
+          <div className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-12 text-white relative overflow-hidden">
             <div className="absolute inset-0 bg-black/20"></div>
             <div className="relative z-10">
-              <div className="flex items-center mb-4">
-                <Star className="w-6 h-6 text-accent-300 mr-2" />
-                <span className="text-accent-200 font-medium">Featured Project</span>
+              <div className="flex items-center mb-3 sm:mb-4">
+                <Star className="w-5 h-5 sm:w-6 sm:h-6 text-accent-300 mr-2" />
+                <span className="text-accent-200 font-medium text-sm sm:text-base">Featured Project</span>
               </div>
-              <h3 className="text-3xl lg:text-4xl font-bold mb-4">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4">
                 Civil Engineering Revolution
               </h3>
-              <p className="text-xl text-primary-100 mb-6 max-w-3xl">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-primary-100 mb-4 sm:mb-6 max-w-3xl">
                 Currently developing a groundbreaking Civil Engineering application that will transform 
                 the entire industry on a global scale. This innovative solution will revolutionize 
                 how engineers design, plan, and execute infrastructure projects.

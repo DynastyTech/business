@@ -151,12 +151,12 @@ const Skills = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-3 sm:mb-4">
             Technical <span className="gradient-text">Expertise</span>
           </h2>
-          <p className="text-lg text-secondary-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-secondary-600 dark:text-gray-300 max-w-3xl mx-auto">
             Our comprehensive skill set spans the entire technology spectrum, from frontend development 
             to AI integration, ensuring we can tackle any technical challenge your business faces.
           </p>
@@ -167,7 +167,7 @@ const Skills = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="grid md:grid-cols-3 gap-8 mb-16"
+          className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-16"
         >
           {expertiseAreas.map((area, index) => (
             <motion.div
@@ -175,15 +175,15 @@ const Skills = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
-              className="text-center bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="text-center bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <div className="w-20 h-20 icon-gradient-box mx-auto mb-6">
-                <area.icon className="w-10 h-10 text-white" />
+              <div className="w-14 h-14 sm:w-16 md:w-20 sm:h-16 md:h-20 icon-gradient-box mx-auto mb-4 sm:mb-6">
+                <area.icon className="w-7 h-7 sm:w-8 md:w-10 sm:h-8 md:h-10 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-secondary-900 dark:text-white mb-4">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-secondary-900 dark:text-white mb-2 sm:mb-4">
                 {area.title}
               </h3>
-              <p className="text-secondary-600 dark:text-gray-300 leading-relaxed">
+              <p className="text-sm sm:text-base text-secondary-600 dark:text-gray-300 leading-relaxed">
                 {area.description}
               </p>
             </motion.div>
@@ -195,20 +195,20 @@ const Skills = () => {
           variants={containerVariants}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8"
         >
           {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
               variants={itemVariants}
-              className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg skill-card-hover"
+              className="bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 shadow-lg skill-card-hover"
             >
               {/* Category Header */}
-              <div className="w-16 h-16 icon-gradient-box mb-6">
-                <category.icon className="w-8 h-8 text-white" />
+              <div className="w-12 h-12 sm:w-14 md:w-16 sm:h-14 md:h-16 icon-gradient-box mb-4 sm:mb-6">
+                <category.icon className="w-6 h-6 sm:w-7 md:w-8 sm:h-7 md:h-8 text-white" />
               </div>
               
-              <h3 className="text-xl font-bold text-secondary-900 dark:text-white mb-6">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-secondary-900 dark:text-white mb-4 sm:mb-6">
                 {category.title}
               </h3>
 
@@ -257,12 +257,12 @@ const Skills = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="mt-16 text-center"
+          className="mt-10 sm:mt-16 text-center"
         >
-          <h3 className="text-2xl font-bold text-secondary-900 dark:text-white mb-8">
+          <h3 className="text-xl sm:text-2xl font-bold text-secondary-900 dark:text-white mb-6 sm:mb-8">
             Additional <span className="gradient-text">Capabilities</span>
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 max-w-4xl mx-auto">
             {[
               "Business Intelligence",
               "Agile Methodologies",

@@ -216,10 +216,10 @@ const Profile = () => {
             </div>
             
             {/* Name and Title */}
-            <h1 className="text-4xl lg:text-5xl font-bold text-secondary-900 dark:text-white mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-secondary-900 dark:text-white mb-3 sm:mb-4">
               Lionel <span className="gradient-text">Raseemela</span>
             </h1>
-            <p className="text-xl text-primary-600 dark:text-primary-400 font-semibold mb-6">
+            <p className="text-base sm:text-lg md:text-xl text-primary-600 dark:text-primary-400 font-semibold mb-4 sm:mb-6">
               Founder & CEO at Dynasty Tech Solutions
             </p>
             
@@ -232,10 +232,10 @@ const Profile = () => {
           </motion.div>
 
           {/* Education Section */}
-          <motion.div variants={itemVariants} className="mb-16">
-            <h3 className="text-2xl font-bold text-secondary-800 dark:text-white mb-8 flex items-center justify-center">
-              <GraduationCap className="w-8 h-8 text-primary-600 mr-3" />
-              Education & Academic Excellence
+          <motion.div variants={itemVariants} className="mb-12 sm:mb-16">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-800 dark:text-white mb-6 sm:mb-8 flex items-center justify-center">
+              <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600 mr-2 sm:mr-3 flex-shrink-0" />
+              <span>Education & Academic Excellence</span>
             </h3>
             <div className="grid lg:grid-cols-2 gap-6">
               {education.map((edu, index) => (
@@ -282,10 +282,10 @@ const Profile = () => {
           </motion.div>
 
           {/* Experience Section */}
-          <motion.div variants={itemVariants} className="mb-16">
-            <h3 className="text-2xl font-bold text-secondary-800 dark:text-white mb-8 flex items-center justify-center">
-              <Code className="w-8 h-8 text-primary-600 mr-3" />
-              Professional Experience
+          <motion.div variants={itemVariants} className="mb-12 sm:mb-16">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-800 dark:text-white mb-6 sm:mb-8 flex items-center justify-center">
+              <Code className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600 mr-2 sm:mr-3 flex-shrink-0" />
+              <span>Professional Experience</span>
             </h3>
             <div className="max-w-3xl mx-auto">
               {experience.map((exp, index) => (
@@ -296,21 +296,21 @@ const Profile = () => {
                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                   className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg card-hover-enhanced border border-secondary-100 dark:border-gray-700"
                 >
-                  <div className="flex items-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center mr-6">
-                      <Code className="w-8 h-8 text-white" />
+                  <div className="flex flex-col sm:flex-row sm:items-center mb-6 gap-4">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <Code className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-2xl font-semibold text-secondary-800 dark:text-white mb-2">
+                      <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-secondary-800 dark:text-white mb-1 sm:mb-2">
                         {exp.role}
                       </h4>
-                      <p className="text-primary-600 dark:text-primary-400 font-medium text-lg">
+                      <p className="text-primary-600 dark:text-primary-400 font-medium text-base sm:text-lg">
                         {exp.company}
                       </p>
                     </div>
-                    <div className="text-right">
-                      <div className="flex items-center text-secondary-500 dark:text-gray-400 text-sm bg-secondary-50 dark:bg-gray-700 px-3 py-2 rounded-full">
-                        <Calendar className="w-4 h-4 mr-2" />
+                    <div className="sm:text-right">
+                      <div className="inline-flex items-center text-secondary-500 dark:text-gray-400 text-xs sm:text-sm bg-secondary-50 dark:bg-gray-700 px-3 py-2 rounded-full">
+                        <Calendar className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                         {exp.period}
                       </div>
                     </div>
@@ -337,10 +337,10 @@ const Profile = () => {
           </motion.div>
 
           {/* Personal Interests Section */}
-          <motion.div variants={itemVariants} className="mb-16">
-            <h3 className="text-2xl font-bold text-secondary-800 dark:text-white mb-8 flex items-center justify-center">
-              <Heart className="w-8 h-8 text-primary-600 mr-3" />
-              Personal Interests & Values
+          <motion.div variants={itemVariants} className="mb-12 sm:mb-16">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-800 dark:text-white mb-6 sm:mb-8 flex items-center justify-center">
+              <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600 mr-2 sm:mr-3 flex-shrink-0" />
+              <span>Personal Interests & Values</span>
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               {personalInterests.map((interest, index) => (
@@ -366,10 +366,10 @@ const Profile = () => {
           </motion.div>
 
           {/* Skills Section */}
-          <motion.div variants={itemVariants} className="mb-16">
-            <h3 className="text-2xl font-bold text-secondary-800 dark:text-white mb-8 flex items-center justify-center">
-              <Award className="w-8 h-8 text-primary-600 mr-3" />
-              Key Skills & Competencies
+          <motion.div variants={itemVariants} className="mb-12 sm:mb-16">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-800 dark:text-white mb-6 sm:mb-8 flex items-center justify-center">
+              <Award className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600 mr-2 sm:mr-3 flex-shrink-0" />
+              <span>Key Skills & Competencies</span>
             </h3>
             <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-secondary-100 dark:border-gray-700">
               <div className="flex flex-wrap gap-4 justify-center">
@@ -389,10 +389,10 @@ const Profile = () => {
           </motion.div>
 
           {/* Hobbies Section */}
-          <motion.div variants={itemVariants} className="mb-16">
-            <h3 className="text-2xl font-bold text-secondary-800 dark:text-white mb-8 flex items-center justify-center">
-              <Music className="w-8 h-8 text-primary-600 mr-3" />
-              Beyond Technology - Personal Interests
+          <motion.div variants={itemVariants} className="mb-12 sm:mb-16">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-800 dark:text-white mb-6 sm:mb-8 flex items-center justify-center text-center">
+              <Music className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600 mr-2 sm:mr-3 flex-shrink-0" />
+              <span>Beyond Technology</span>
             </h3>
             <p className="text-lg text-secondary-600 dark:text-gray-300 mb-8 text-center">
               While technology is my passion, I believe in maintaining a balanced life that includes 
@@ -456,10 +456,10 @@ const Profile = () => {
           </motion.div>
 
           {/* Personal Traits Section */}
-          <motion.div variants={itemVariants} className="mb-16">
-            <h3 className="text-2xl font-bold text-secondary-800 dark:text-white mb-8 flex items-center">
-              <Heart className="w-8 h-8 text-primary-600 mr-3" />
-              Personal Traits & Values
+          <motion.div variants={itemVariants} className="mb-12 sm:mb-16">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-800 dark:text-white mb-6 sm:mb-8 flex items-center justify-center">
+              <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600 mr-2 sm:mr-3 flex-shrink-0" />
+              <span>Personal Traits & Values</span>
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {personalTraits.map((trait, index) => (
