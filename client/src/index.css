@@ -36,7 +36,7 @@
   body {
     font-family: var(--font-sans);
     line-height: 1.6;
-    color: #1f2937;
+    color: #111827;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     position: relative;
@@ -48,7 +48,7 @@
   
   /* Dark mode styles */
   .dark body {
-    color: #f3f4f6;
+    color: #ffffff;
     background-color: #111827;
   }
   
@@ -60,6 +60,7 @@
     font-family: var(--font-heading);
     font-weight: 600;
     line-height: 1.2;
+    color: #111827;
     transition: color 0.3s ease;
     /* Prevent word breaking/hyphenation on mobile for better readability */
     overflow-wrap: normal;
@@ -70,7 +71,16 @@
   }
   
   .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-    color: #f9fafb;
+    color: #ffffff;
+  }
+  
+  /* Professional text colors */
+  p, span, li, a {
+    transition: color 0.3s ease;
+  }
+  
+  .dark p, .dark span, .dark li {
+    color: #e5e7eb;
   }
   
   /* Prevent horizontal scrolling on mobile */

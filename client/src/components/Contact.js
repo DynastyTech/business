@@ -333,43 +333,6 @@ const Contact = () => {
                 </div>
               </div>
 
-              {/* Quick Response */}
-              <div className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl p-8 text-white text-center">
-                <h3 className="text-xl font-bold mb-4">
-                  Quick Response Guarantee
-                </h3>
-                <p className="text-primary-100 mb-6">
-                  We typically respond to all inquiries within 24 hours. 
-                  For urgent projects, we're available for immediate consultation.
-                </p>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => window.open('mailto:lraseemela@gmail.com', '_blank')}
-                  className="bg-white text-primary-600 font-bold py-3 px-6 rounded-xl hover:shadow-2xl transition-all duration-300"
-                >
-                  Email Now
-                </motion.button>
-              </div>
-
-              {/* Delivery Guarantee */}
-              <div className="bg-gradient-to-r from-accent-500 to-primary-600 rounded-2xl p-8 text-white text-center">
-                <div className="flex justify-center mb-4">
-                  <span className="text-4xl">⚡</span>
-                </div>
-                <h3 className="text-xl font-bold mb-4">
-                  7-Day Website Delivery
-                </h3>
-                <p className="text-accent-100 mb-4">
-                  Get your professional website up and running in just 7 days. 
-                  Quality and speed - we deliver both!
-                </p>
-                <div className="bg-white/20 rounded-lg p-3 mb-4">
-                  <span className="text-sm font-medium">
-                    🚀 Fast • 💎 Quality • ✅ Guaranteed
-                  </span>
-                </div>
-              </div>
             </div>
           </motion.div>
         </motion.div>

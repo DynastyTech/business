@@ -233,8 +233,10 @@ const Profile = () => {
 
           {/* Education Section */}
           <motion.div variants={itemVariants} className="mb-12 sm:mb-16">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-800 dark:text-white mb-6 sm:mb-8 flex items-center justify-center">
-              <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600 mr-2 sm:mr-3 flex-shrink-0" />
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-900 dark:text-white mb-6 sm:mb-8 flex items-center justify-center">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 icon-gradient-box mr-2 sm:mr-3 flex-shrink-0">
+                <GraduationCap className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+              </div>
               <span>Education & Academic Excellence</span>
             </h3>
             <div className="grid lg:grid-cols-2 gap-6">
@@ -247,28 +249,28 @@ const Profile = () => {
                   className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover-enhanced border border-secondary-100 dark:border-gray-700"
                 >
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center mr-4">
-                      <GraduationCap className="w-6 h-6 text-white" />
+                    <div className="w-10 h-10 icon-gradient-box mr-3">
+                      <GraduationCap className="w-5 h-5 text-white" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-xl font-semibold text-secondary-800 dark:text-white mb-1">
+                      <h4 className="text-lg font-semibold text-secondary-900 dark:text-white mb-1">
                         {edu.degree}
                       </h4>
-                      <p className="text-primary-600 dark:text-primary-400 font-medium text-sm">
+                      <p className="text-secondary-600 dark:text-gray-300 font-medium text-sm">
                         {edu.institution}
                       </p>
                     </div>
                     <div className="text-right">
-                      <div className="flex items-center text-secondary-500 dark:text-gray-400 text-sm">
+                      <div className="flex items-center text-secondary-600 dark:text-gray-400 text-sm">
                         <Calendar className="w-4 h-4 mr-1" />
                         {edu.year}
                       </div>
                     </div>
                   </div>
                   
-                  <div className="flex items-center mb-4 p-3 bg-accent-50 dark:bg-accent-900/20 rounded-lg">
-                    <Award className="w-5 h-5 text-accent-500 mr-2 flex-shrink-0" />
-                    <span className="text-accent-600 dark:text-accent-400 font-semibold text-sm">
+                  <div className="flex items-center mb-4 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">
+                    <Award className="w-5 h-5 text-secondary-600 dark:text-gray-300 mr-2 flex-shrink-0" />
+                    <span className="text-secondary-700 dark:text-gray-200 font-semibold text-sm">
                       {edu.achievements}
                     </span>
                   </div>
@@ -283,8 +285,10 @@ const Profile = () => {
 
           {/* Experience Section */}
           <motion.div variants={itemVariants} className="mb-12 sm:mb-16">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-800 dark:text-white mb-6 sm:mb-8 flex items-center justify-center">
-              <Code className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600 mr-2 sm:mr-3 flex-shrink-0" />
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-900 dark:text-white mb-6 sm:mb-8 flex items-center justify-center">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 icon-gradient-box mr-2 sm:mr-3 flex-shrink-0">
+                <Code className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+              </div>
               <span>Professional Experience</span>
             </h3>
             <div className="max-w-3xl mx-auto">
@@ -297,8 +301,8 @@ const Profile = () => {
                   className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg card-hover-enhanced border border-secondary-100 dark:border-gray-700"
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center mb-6 gap-4">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Code className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 icon-gradient-box flex-shrink-0">
+                      <Code className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                     </div>
                     <div className="flex-1">
                       <h4 className="text-lg sm:text-xl md:text-2xl font-semibold text-secondary-800 dark:text-white mb-1 sm:mb-2">
@@ -338,8 +342,10 @@ const Profile = () => {
 
           {/* Personal Interests Section */}
           <motion.div variants={itemVariants} className="mb-12 sm:mb-16">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-800 dark:text-white mb-6 sm:mb-8 flex items-center justify-center">
-              <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600 mr-2 sm:mr-3 flex-shrink-0" />
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-900 dark:text-white mb-6 sm:mb-8 flex items-center justify-center">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 icon-gradient-box mr-2 sm:mr-3 flex-shrink-0">
+                <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+              </div>
               <span>Personal Interests & Values</span>
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
@@ -349,15 +355,15 @@ const Profile = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                  className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg card-hover-enhanced border border-secondary-100 dark:border-gray-700"
+                  className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg card-hover-enhanced border border-secondary-100 dark:border-gray-700"
                 >
-                  <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <interest.icon className="w-10 h-10 text-white" />
+                  <div className="w-16 h-16 icon-gradient-box mx-auto mb-4">
+                    <interest.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="text-xl font-bold text-secondary-800 dark:text-white mb-3 text-center">
+                  <h4 className="text-lg font-bold text-secondary-900 dark:text-white mb-2 text-center">
                     {interest.title}
                   </h4>
-                  <p className="text-secondary-600 dark:text-gray-300 leading-relaxed text-center">
+                  <p className="text-secondary-600 dark:text-gray-300 leading-relaxed text-center text-sm">
                     {interest.description}
                   </p>
                 </motion.div>
@@ -367,8 +373,10 @@ const Profile = () => {
 
           {/* Skills Section */}
           <motion.div variants={itemVariants} className="mb-12 sm:mb-16">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-800 dark:text-white mb-6 sm:mb-8 flex items-center justify-center">
-              <Award className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600 mr-2 sm:mr-3 flex-shrink-0" />
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-900 dark:text-white mb-6 sm:mb-8 flex items-center justify-center">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 icon-gradient-box mr-2 sm:mr-3 flex-shrink-0">
+                <Award className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+              </div>
               <span>Key Skills & Competencies</span>
             </h3>
             <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-secondary-100 dark:border-gray-700">
@@ -379,7 +387,7 @@ const Profile = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                     transition={{ duration: 0.4, delay: 0.8 + index * 0.05 }}
-                    className="px-6 py-3 bg-gradient-to-r from-primary-100 to-accent-100 dark:from-primary-900 dark:to-accent-900 text-primary-700 dark:text-primary-300 rounded-full text-sm font-semibold border border-primary-200 dark:border-primary-700 hover:from-primary-200 hover:to-accent-200 transition-all duration-300"
+                    className="px-5 py-2 bg-gray-100 dark:bg-gray-700 text-secondary-900 dark:text-white rounded-full text-sm font-medium border border-gray-200 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
                   >
                     {skill}
                   </motion.span>
@@ -390,8 +398,10 @@ const Profile = () => {
 
           {/* Hobbies Section */}
           <motion.div variants={itemVariants} className="mb-12 sm:mb-16">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-800 dark:text-white mb-6 sm:mb-8 flex items-center justify-center text-center">
-              <Music className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600 mr-2 sm:mr-3 flex-shrink-0" />
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-900 dark:text-white mb-6 sm:mb-8 flex items-center justify-center text-center">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 icon-gradient-box mr-2 sm:mr-3 flex-shrink-0">
+                <Music className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+              </div>
               <span>Beyond Technology</span>
             </h3>
             <p className="text-lg text-secondary-600 dark:text-gray-300 mb-8 text-center">
@@ -399,7 +409,7 @@ const Profile = () => {
               creative pursuits, helping others, and continuous personal growth.
             </p>
             
-            <div className="grid lg:grid-cols-2 gap-8">
+            <div className="grid sm:grid-cols-2 gap-6">
               {hobbies.map((hobby, index) => (
                 <motion.div
                   key={hobby.title}
@@ -408,46 +418,34 @@ const Profile = () => {
                   transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
                   className="group"
                 >
-                  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg card-hover-enhanced overflow-hidden border border-secondary-100 dark:border-gray-700">
-                    {/* Image */}
-                    <div className="relative h-48 overflow-hidden">
-                      <img
-                        src={hobby.image}
-                        alt={hobby.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                      <div className="absolute top-4 left-4">
-                        <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${hobby.color} flex items-center justify-center`}>
-                          <hobby.icon className="w-7 h-7 text-white" />
-                        </div>
-                      </div>
+                  <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg card-hover-enhanced border border-secondary-100 dark:border-gray-700 p-6">
+                    {/* Icon */}
+                    <div className="w-14 h-14 icon-gradient-box mb-4">
+                      <hobby.icon className="w-7 h-7 text-white" />
                     </div>
 
                     {/* Content */}
-                    <div className="p-6">
-                      <h4 className="text-xl font-bold text-secondary-900 dark:text-white mb-3 group-hover:text-primary-600 transition-colors duration-300">
-                        {hobby.title}
-                      </h4>
-                      
-                      <p className="text-secondary-600 dark:text-gray-300 mb-4 leading-relaxed text-sm">
-                        {hobby.description}
-                      </p>
+                    <h4 className="text-lg font-bold text-secondary-900 dark:text-white mb-3">
+                      {hobby.title}
+                    </h4>
+                    
+                    <p className="text-secondary-600 dark:text-gray-300 mb-4 leading-relaxed text-sm">
+                      {hobby.description}
+                    </p>
 
-                      {/* Details */}
-                      <div className="grid grid-cols-2 gap-2">
-                        {hobby.details.map((detail, detailIndex) => (
-                          <div
-                            key={detail}
-                            className="flex items-center space-x-2"
-                          >
-                            <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${hobby.color}`}></div>
-                            <span className="text-xs text-secondary-700 dark:text-gray-300 font-medium">
-                              {detail}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
+                    {/* Details */}
+                    <div className="grid grid-cols-2 gap-2">
+                      {hobby.details.map((detail, detailIndex) => (
+                        <div
+                          key={detail}
+                          className="flex items-center space-x-2"
+                        >
+                          <div className="w-2 h-2 rounded-full bg-primary-500"></div>
+                          <span className="text-xs text-secondary-700 dark:text-gray-300 font-medium">
+                            {detail}
+                          </span>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </motion.div>
@@ -457,8 +455,10 @@ const Profile = () => {
 
           {/* Personal Traits Section */}
           <motion.div variants={itemVariants} className="mb-12 sm:mb-16">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-800 dark:text-white mb-6 sm:mb-8 flex items-center justify-center">
-              <Heart className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600 mr-2 sm:mr-3 flex-shrink-0" />
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-secondary-900 dark:text-white mb-6 sm:mb-8 flex items-center justify-center">
+              <div className="w-8 h-8 sm:w-10 sm:h-10 icon-gradient-box mr-2 sm:mr-3 flex-shrink-0">
+                <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+              </div>
               <span>Personal Traits & Values</span>
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -468,10 +468,10 @@ const Profile = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.6, delay: 1.2 + index * 0.1 }}
-                  className="text-center bg-gradient-to-br from-primary-50 to-accent-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-6 border border-primary-100 dark:border-gray-600 card-hover-enhanced"
+                  className="text-center bg-white dark:bg-gray-800 rounded-2xl p-6 border border-secondary-100 dark:border-gray-700 card-hover-enhanced shadow-lg"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <trait.icon className="w-8 h-8 text-white" />
+                  <div className="w-14 h-14 icon-gradient-box mx-auto mb-4">
+                    <trait.icon className="w-7 h-7 text-white" />
                   </div>
                   <h4 className="text-lg font-bold text-secondary-900 dark:text-white mb-2">
                     {trait.title}
