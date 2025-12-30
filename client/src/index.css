@@ -159,6 +159,15 @@
     @apply bg-gradient-to-br from-teal-400 via-blue-500 to-amber-400 rounded-2xl flex items-center justify-center;
   }
   
+  /* WhatsApp button - gradient default, green on hover */
+  .whatsapp-btn {
+    @apply bg-gradient-to-br from-teal-400 via-blue-500 to-amber-400;
+  }
+  
+  .whatsapp-btn:hover {
+    background: #25D366 !important;
+  }
+  
   .btn-primary {
     @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
   }

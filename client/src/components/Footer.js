@@ -210,7 +210,7 @@ const Footer = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         transition={{ duration: 0.3 }}
-        className="fixed bottom-24 right-4 sm:right-8 w-12 h-12 sm:w-14 sm:h-14 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center group"
+        className="fixed bottom-24 right-4 sm:right-8 w-12 h-12 sm:w-14 sm:h-14 whatsapp-btn text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center group"
         title="Chat on WhatsApp"
       >
         <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />
