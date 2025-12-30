@@ -105,9 +105,7 @@ const About = () => {
                 Our Mission
               </h3>
               <p className="text-secondary-600 dark:text-gray-300 leading-relaxed">
-                To revolutionize industries through innovative technology solutions. We're currently 
-                developing a groundbreaking Civil Engineering application that will transform the 
-                entire industry on a global scale. Our commitment to quality, innovation, and 
+                To revolutionize industries through innovative technology solutions. Our commitment to quality, innovation, and 
                 client success drives everything we do.
               </p>
             </motion.div>

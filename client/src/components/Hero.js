@@ -66,7 +66,7 @@ const Hero = () => {
             Dynasty Tech Solutions delivers cutting-edge software development, AI consulting, 
             and digital transformation services. We build the future, one innovation at a time.
             <span className="block mt-2 text-accent-600 dark:text-accent-400 font-semibold text-sm sm:text-base">
-              ⚡ Websites delivered in 7 days guaranteed!
+              Websites delivered in 7-14 days guaranteed!
             </span>
           </motion.p>
 
