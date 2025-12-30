@@ -34,7 +34,7 @@ const Hero = () => {
   ];
 
   return (
-          <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden mobile-scroll-fix">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden pt-20 lg:pt-24">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
@@ -42,7 +42,7 @@ const Hero = () => {
         <div className="absolute top-40 left-40 w-80 h-80 bg-secondary-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
       </div>
 
-      <div className="container-custom relative z-10">
+      <div className="container-custom relative z-10 px-4 sm:px-6">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -52,7 +52,7 @@ const Hero = () => {
           {/* Main Heading */}
           <motion.h1
             variants={itemVariants}
-            className="text-2xl sm:text-5xl lg:text-3xl xl:text-5xl font-bold text-secondary-900 dark:text-white mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-900 dark:text-white mb-4 sm:mb-6 leading-tight"
           >
             Transforming Businesses Through
             <span className="gradient-text block">Innovative Technology</span>
@@ -61,11 +61,11 @@ const Hero = () => {
           {/* Subtitle */}
           <motion.p
             variants={itemVariants}
-            className="text-lg sm:text-xl lg:text-2xl text-secondary-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-base sm:text-lg lg:text-xl text-secondary-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto leading-relaxed px-2"
           >
             Dynasty Tech Solutions delivers cutting-edge software development, AI consulting, 
             and digital transformation services. We build the future, one innovation at a time.
-            <span className="block mt-2 text-accent-600 dark:text-accent-400 font-semibold">
+            <span className="block mt-2 text-accent-600 dark:text-accent-400 font-semibold text-sm sm:text-base">
               ⚡ Websites delivered in 7 days guaranteed!
             </span>
           </motion.p>
@@ -73,25 +73,25 @@ const Hero = () => {
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12"
           >
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-              className="btn-primary text-lg px-8 py-4 flex items-center"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="btn-primary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 flex items-center w-full sm:w-auto justify-center"
             >
               Start Your Project
-              <ArrowRight className="ml-2 w-5 h-5" />
+              <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
             </motion.button>
             
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
-              className="btn-secondary text-lg px-8 py-4 flex items-center"
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+              className="btn-secondary text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 flex items-center w-full sm:w-auto justify-center"
             >
-              <Play className="mr-2 w-5 h-5" />
+              <Play className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
               View Our Work
             </motion.button>
           </motion.div>
@@ -99,7 +99,7 @@ const Hero = () => {
           {/* Stats */}
           <motion.div
             variants={itemVariants}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-2xl mx-auto"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-2xl mx-auto"
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -110,14 +110,14 @@ const Hero = () => {
                 className="text-center"
               >
                 <div className="flex justify-center mb-2">
-                  <div className="w-14 h-14 icon-gradient-box">
-                    <stat.icon className="w-7 h-7 text-white" />
+                  <div className="w-10 h-10 sm:w-14 sm:h-14 icon-gradient-box">
+                    <stat.icon className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
                   </div>
                 </div>
-                <div className="text-2xl lg:text-3xl font-bold text-secondary-900 dark:text-white mb-1">
+                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-secondary-900 dark:text-white mb-1">
                   {stat.value}
                 </div>
-                <div className="text-sm text-secondary-600 dark:text-gray-400">
+                <div className="text-xs sm:text-sm text-secondary-600 dark:text-gray-400">
                   {stat.label}
                 </div>
               </motion.div>

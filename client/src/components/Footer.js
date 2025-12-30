@@ -7,11 +7,9 @@ import {
   Linkedin, 
   MapPin, 
   ArrowUp,
-  Heart,
   Phone,
   MessageCircle
 } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -212,19 +210,14 @@ const Footer = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         transition={{ duration: 0.3 }}
-        className="fixed bottom-40 right-8 w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center group"
+        className="fixed bottom-24 right-4 sm:right-8 w-12 h-12 sm:w-14 sm:h-14 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center group"
         title="Chat on WhatsApp"
       >
-        <MessageCircle className="w-7 h-7" />
-        <span className="absolute right-16 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+        <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />
+        <span className="absolute right-14 sm:right-16 bg-gray-900 text-white text-sm px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap hidden sm:block">
           Chat on WhatsApp
         </span>
       </motion.a>
-
-      {/* Theme Toggle Button */}
-      <div className="fixed bottom-24 right-8 z-50">
-        <ThemeToggle />
-      </div>
 
       {/* Scroll to Top Button */}
       <motion.button
@@ -234,9 +227,9 @@ const Footer = () => {
         whileTap={{ scale: 0.9 }}
         transition={{ duration: 0.3, delay: 0.8 }}
         onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 icon-gradient text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center"
+        className="fixed bottom-8 right-4 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 icon-gradient text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center"
       >
-        <ArrowUp className="w-6 h-6" />
+        <ArrowUp className="w-5 h-5 sm:w-6 sm:h-6" />
       </motion.button>
     </footer>
   );
