@@ -224,7 +224,7 @@ const Projects = () => {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="bg-secondary-100 text-secondary-700 px-3 py-1 rounded-full text-xs font-medium"
+                        className="bg-secondary-100 dark:bg-gray-700 text-secondary-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs font-medium"
                       >
                         {tech}
                       </span>
@@ -240,7 +240,7 @@ const Projects = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 bg-secondary-100 hover:bg-secondary-200 text-secondary-700 font-medium py-2 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center"
+                        className="flex-1 bg-secondary-100 dark:bg-gray-700 hover:bg-secondary-200 dark:hover:bg-gray-600 text-secondary-700 dark:text-gray-300 font-medium py-2 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center"
                       >
                         <Github className="w-4 h-4 mr-2" />
                         Code
@@ -260,7 +260,7 @@ const Projects = () => {
                       </motion.a>
                     )}
                     {!project.github && !project.live && (
-                      <div className="flex-1 bg-secondary-100 text-secondary-500 font-medium py-2 px-4 rounded-lg flex items-center justify-center">
+                      <div className="flex-1 bg-secondary-100 dark:bg-gray-700 text-secondary-500 dark:text-gray-400 font-medium py-2 px-4 rounded-lg flex items-center justify-center">
                         <Plus className="w-4 h-4 mr-2" />
                         Coming Soon
                       </div>
@@ -279,7 +279,7 @@ const Projects = () => {
           transition={{ duration: 0.6, delay: 1.2 }}
           className="text-center mt-16"
         >
-          <p className="text-lg text-secondary-600 mb-6">
+          <p className="text-lg text-secondary-600 dark:text-gray-300 mb-6">
             Have a project in mind? Let's create something amazing together!
           </p>
           <motion.button

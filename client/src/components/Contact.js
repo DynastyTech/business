@@ -273,11 +273,11 @@ const Contact = () => {
           <motion.div variants={itemVariants} className="order-1 lg:order-2">
             <div className="space-y-8">
               {/* Company Info */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg contact-card-hover">
-                <h3 className="text-2xl font-bold text-secondary-900 mb-6">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg contact-card-hover">
+                <h3 className="text-2xl font-bold text-secondary-900 dark:text-white mb-6">
                   Dynasty Tech Solutions & Consulting
                 </h3>
-                <p className="text-secondary-600 mb-6 leading-relaxed">
+                <p className="text-secondary-600 dark:text-gray-300 mb-6 leading-relaxed">
                   We specialize in building innovative technology solutions that drive business growth. 
                   From web applications to AI-powered systems, we deliver quality that exceeds expectations.
                 </p>
@@ -286,15 +286,15 @@ const Contact = () => {
                     <span className="text-white font-bold text-lg">DT</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-secondary-900">Lionel Raseemela</h4>
-                    <p className="text-sm text-secondary-600">Founder & CEO</p>
+                    <h4 className="font-semibold text-secondary-900 dark:text-white">Lionel Raseemela</h4>
+                    <p className="text-sm text-secondary-600 dark:text-gray-400">Founder & CEO</p>
                   </div>
                 </div>
               </div>
 
               {/* Contact Details */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg contact-card-hover">
-                <h3 className="text-xl font-bold text-secondary-900 mb-6">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg contact-card-hover">
+                <h3 className="text-xl font-bold text-secondary-900 dark:text-white mb-6">
                   Get In Touch
                 </h3>
                 <div className="space-y-4">
@@ -310,7 +310,7 @@ const Contact = () => {
                         <info.icon className="w-6 h-6 text-white" />
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-medium text-secondary-900 text-sm">
+                        <h4 className="font-medium text-secondary-900 dark:text-white text-sm">
                           {info.title}
                         </h4>
                         {info.link ? (
@@ -318,12 +318,12 @@ const Contact = () => {
                             href={info.link}
                             target={info.link.startsWith('http') ? "_blank" : "_self"}
                             rel={info.link.startsWith('http') ? "noopener noreferrer" : ""}
-                            className="text-primary-600 hover:text-primary-700 font-medium transition-colors duration-300"
+                            className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors duration-300"
                           >
                             {info.value}
                           </a>
                         ) : (
-                          <p className="text-secondary-600 font-medium">
+                          <p className="text-secondary-600 dark:text-gray-400 font-medium">
                             {info.value}
                           </p>
                         )}

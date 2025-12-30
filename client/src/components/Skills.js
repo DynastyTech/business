@@ -175,15 +175,15 @@ const Skills = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.6, delay: 0.4 + index * 0.2 }}
-              className="text-center bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+              className="text-center bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <div className="w-20 h-20 icon-gradient-box mx-auto mb-6">
                 <area.icon className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-secondary-900 mb-4">
+              <h3 className="text-xl font-bold text-secondary-900 dark:text-white mb-4">
                 {area.title}
               </h3>
-              <p className="text-secondary-600 leading-relaxed">
+              <p className="text-secondary-600 dark:text-gray-300 leading-relaxed">
                 {area.description}
               </p>
             </motion.div>
@@ -222,16 +222,16 @@ const Skills = () => {
                     transition={{ duration: 0.4, delay: 0.8 + index * 0.1 + skillIndex * 0.05 }}
                   >
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-secondary-700">
+                      <span className="text-sm font-medium text-secondary-700 dark:text-gray-300">
                         {skill.name}
                       </span>
-                      <span className="text-xs text-secondary-500">
+                      <span className="text-xs text-secondary-500 dark:text-gray-400">
                         {skill.years}
                       </span>
                     </div>
                     
                     {/* Skill Bar */}
-                    <div className="w-full bg-secondary-200 rounded-full h-2">
+                    <div className="w-full bg-secondary-200 dark:bg-gray-600 rounded-full h-2">
                       <motion.div
                         initial={{ width: 0 }}
                         animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
@@ -241,7 +241,7 @@ const Skills = () => {
                     </div>
                     
                     <div className="text-right">
-                      <span className="text-xs font-medium text-primary-600">
+                      <span className="text-xs font-medium text-primary-600 dark:text-primary-400">
                         {skill.level}%
                       </span>
                     </div>
@@ -259,7 +259,7 @@ const Skills = () => {
           transition={{ duration: 0.6, delay: 1.2 }}
           className="mt-16 text-center"
         >
-          <h3 className="text-2xl font-bold text-secondary-900 mb-8">
+          <h3 className="text-2xl font-bold text-secondary-900 dark:text-white mb-8">
             Additional <span className="gradient-text">Capabilities</span>
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
