@@ -1,0 +1,276 @@
+/* Dynasty Tech Services Carousel Styles */
+
+.services-carousel-section {
+  padding: 4rem 0;
+}
+
+.services-swiper {
+  padding: 2rem 0 4rem;
+}
+
+.services-swiper .swiper-slide {
+  width: 380px;
+  height: auto;
+}
+
+.service-card-carousel {
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark .service-card-carousel {
+  background-color: #1f2937;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.service-card-carousel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(59, 130, 246, 0.2);
+}
+
+.dark .service-card-carousel:hover {
+  box-shadow: 0 12px 32px rgba(96, 165, 250, 0.3);
+}
+
+.service-icon-container {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #14b8a6 0%, #3b82f6 50%, #f59e0b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-icon-container svg {
+  width: 64px;
+  height: 64px;
+  color: white;
+  transition: transform 0.5s ease;
+}
+
+.service-card-carousel:hover .service-icon-container svg {
+  transform: scale(1.2);
+}
+
+.service-icon-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card-carousel:hover .service-icon-overlay {
+  opacity: 1;
+}
+
+.service-icon-overlay .btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #14b8a6, #3b82f6);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.service-icon-overlay .btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.6);
+}
+
+.service-info {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-info h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+  transition: color 0.2s ease;
+}
+
+.dark .service-info h3 {
+  color: #f9fafb;
+}
+
+.service-card-carousel:hover .service-info h3 {
+  color: #3b82f6;
+}
+
+.service-description {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.dark .service-description {
+  color: #9ca3af;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.dark .service-features li {
+  color: #9ca3af;
+}
+
+.service-features li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(135deg, #14b8a6, #3b82f6);
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Swiper Navigation */
+.services-swiper .swiper-button-next,
+.services-swiper .swiper-button-prev {
+  color: #3b82f6;
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.dark .services-swiper .swiper-button-next,
+.dark .services-swiper .swiper-button-prev {
+  background-color: #374151;
+  color: #60a5fa;
+}
+
+.services-swiper .swiper-button-next:hover,
+.services-swiper .swiper-button-prev:hover {
+  background: linear-gradient(135deg, #14b8a6, #3b82f6);
+  color: white;
+}
+
+.services-swiper .swiper-button-next:after,
+.services-swiper .swiper-button-prev:after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Swiper Pagination */
+.services-swiper .swiper-pagination-bullet {
+  background-color: #9ca3af;
+  opacity: 0.5;
+  width: 10px;
+  height: 10px;
+}
+
+.services-swiper .swiper-pagination-bullet-active {
+  background: linear-gradient(135deg, #14b8a6, #3b82f6);
+  opacity: 1;
+  width: 24px;
+  border-radius: 5px;
+}
+
+/* Coverflow effect shadow styling */
+.services-swiper .swiper-slide-shadow-left,
+.services-swiper .swiper-slide-shadow-right {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent);
+  border-radius: 16px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .services-carousel-section {
+    padding: 3rem 0;
+  }
+
+  .services-swiper .swiper-slide {
+    width: 300px;
+  }
+
+  .service-icon-container {
+    height: 140px;
+  }
+
+  .service-icon-container svg {
+    width: 48px;
+    height: 48px;
+  }
+
+  .services-swiper .swiper-button-next,
+  .services-swiper .swiper-button-prev {
+    display: none;
+  }
+
+  .service-info {
+    padding: 1.25rem;
+  }
+
+  .service-info h3 {
+    font-size: 1.125rem;
+  }
+
+  .service-description {
+    font-size: 0.85rem;
+  }
+
+  .service-features li {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-swiper .swiper-slide {
+    width: 280px;
+  }
+
+  .service-icon-container {
+    height: 120px;
+  }
+
+  .service-icon-container svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .service-info h3 {
+    font-size: 1rem;
+  }
+}
+

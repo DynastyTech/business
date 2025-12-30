@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
 import { 
   Globe, 
   Smartphone, 
@@ -10,36 +12,21 @@ import {
   Cloud, 
   Shield, 
   Zap,
-  Code,
-  BarChart3,
-  Cpu,
-  Network
+  ArrowRight
 } from 'lucide-react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-coverflow';
+import './ServicesCarousel.css';
 
 const Services = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
-    visible: {
-      y: 2,
-      opacity: 1,
-      transition: { duration: 0.6 },
-    },
-  };
 
   const services = [
     {
@@ -102,7 +89,7 @@ const Services = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-4">
             Our <span className="gradient-text">Services</span>
@@ -113,65 +100,80 @@ const Services = () => {
           </p>
         </motion.div>
 
-        {/* Main Services Grid */}
+        {/* Services Carousel */}
         <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="services-carousel-section mb-16"
         >
-          {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              variants={itemVariants}
-              whileHover={{ y: -10 }}
-              className="group relative"
-            >
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg service-card-hover h-full border border-secondary-100 dark:border-gray-700">
-                {/* Icon */}
-                <div className="w-16 h-16 icon-gradient-box mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <service.icon className="w-8 h-8 text-white" />
-                </div>
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView="auto"
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 2.5,
+              slideShadows: true,
+            }}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            pagination={{ clickable: true }}
+            navigation={true}
+            loop={true}
+            className="services-swiper"
+          >
+            {services.map((service, index) => (
+              <SwiperSlide key={service.title}>
+                <motion.div
+                  className="service-card-carousel"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {/* Icon Header */}
+                  <div className="service-icon-container">
+                    <service.icon />
+                    <div className="service-icon-overlay">
+                      <button className="btn">
+                        Learn More
+                        <ArrowRight size={16} />
+                      </button>
+                    </div>
+                  </div>
 
-                {/* Content */}
-                <h3 className="text-xl font-bold text-secondary-900 dark:text-white mb-4 group-hover:text-primary-600 transition-colors duration-300">
-                  {service.title}
-                </h3>
-                <p className="text-secondary-600 dark:text-gray-300 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-
-                {/* Features */}
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
-                    <motion.li
-                      key={feature}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                      transition={{ duration: 0.4, delay: 0.8 + index * 0.1 + featureIndex * 0.05 }}
-                      className="flex items-center text-sm text-secondary-600"
-                    >
-                      <div className="w-2 h-2 bg-primary-500 rounded-full mr-3 flex-shrink-0"></div>
-                      {feature}
-                    </motion.li>
-                  ))}
-                </ul>
-
-                {/* Hover Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-accent-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-            </motion.div>
-          ))}
+                  {/* Content */}
+                  <div className="service-info">
+                    <h3>{service.title}</h3>
+                    <p className="service-description">{service.description}</p>
+                    
+                    {/* Features */}
+                    <ul className="service-features">
+                      {service.features.slice(0, 4).map((feature) => (
+                        <li key={feature}>{feature}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </motion.div>
 
         {/* Special Services */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mb-12"
         >
-          <h3 className="text-2xl font-bold text-secondary-900 mb-8">
+          <h3 className="text-2xl font-bold text-secondary-900 dark:text-white mb-8">
             <span className="gradient-text">Special Capabilities</span>
           </h3>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -180,7 +182,7 @@ const Services = () => {
                 key={service.title}
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.6, delay: 1.0 + index * 0.2 }}
+                transition={{ duration: 0.6, delay: 0.6 + index * 0.2 }}
                 className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border-2 border-accent-200 dark:border-accent-600 service-card-hover"
               >
                 <div className="w-20 h-20 icon-gradient-box mx-auto mb-6">
@@ -201,8 +203,8 @@ const Services = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-          className="text-center bg-gradient-to-r from-accent-500 to-primary-600 rounded-3xl p-12 text-white mb-8"
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="text-center bg-gradient-to-r from-accent-500 to-primary-600 rounded-3xl p-12 text-white"
         >
           <div className="flex justify-center mb-4">
             <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
