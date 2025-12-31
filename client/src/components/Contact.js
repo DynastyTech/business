@@ -92,7 +92,7 @@ const Contact = () => {
     {
       icon: Github,
       title: "GitHub",
-      value: "@DynastyTech",
+      value: "DynastyTech",
       link: "https://github.com/DynastyTech"
     },
     {
