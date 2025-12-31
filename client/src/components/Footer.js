@@ -8,6 +8,7 @@ import {
   ArrowUp,
   Phone
 } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 // WhatsApp Icon Component
 const WhatsAppIcon = ({ className }) => (
@@ -21,18 +22,43 @@ const WhatsAppIcon = ({ className }) => (
 );
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleNavigation = (item) => {
+    if (item.isPage) {
+      navigate(item.href);
+    } else {
+      // If we're not on the home page, navigate there first
+      if (location.pathname !== '/') {
+        navigate('/');
+        setTimeout(() => {
+          const element = document.querySelector(item.href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      } else {
+        const element = document.querySelector(item.href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
   };
 
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     company: [
-      { name: 'About Us', href: '#about' },
-      { name: 'Our Services', href: '#services' },
-      { name: 'Projects', href: '#projects' },
-      { name: 'Contact', href: '#contact' }
+      { name: 'About Us', href: '#about', isPage: false },
+      { name: 'Our Services', href: '#services', isPage: false },
+      { name: 'Projects', href: '/projects', isPage: true },
+      { name: 'Contact', href: '/contact', isPage: true }
     ],
     services: [
       'Web Development',
@@ -129,12 +155,12 @@ const Footer = () => {
               <ul className="space-y-2">
                 {footerLinks.company.map((link, index) => (
                   <li key={index}>
-                    <a
-                      href={link.href}
-                      className="text-secondary-300 hover:text-primary-400 transition-colors duration-300"
+                    <button
+                      onClick={() => handleNavigation(link)}
+                      className="text-secondary-300 hover:text-primary-400 transition-colors duration-300 text-left"
                     >
                       {link.name}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>
