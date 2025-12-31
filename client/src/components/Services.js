@@ -9,7 +9,8 @@ import {
   Brain, 
   Users, 
   Database, 
-  Cloud
+  Cloud,
+  Coins
 } from 'lucide-react';
 
 // Import Swiper styles
@@ -61,6 +62,12 @@ const Services = () => {
       title: "Cloud Solutions",
       description: "AWS cloud infrastructure, DevOps automation, and scalable cloud architecture.",
       features: ["AWS Services", "DevOps Automation", "CI/CD Pipelines", "Infrastructure as Code"]
+    },
+    {
+      icon: Coins,
+      title: "Blockchain & Web3",
+      description: "Smart contracts, DeFi solutions, NFT platforms, and decentralized applications on Ethereum, Solana, and more.",
+      features: ["Smart Contracts", "DeFi & DApps", "NFT Marketplaces", "Token Development"]
     }
   ];
 

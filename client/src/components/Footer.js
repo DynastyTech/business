@@ -4,8 +4,7 @@ import {
   Mail, 
   Github, 
   Linkedin, 
-  MapPin, 
-  ArrowUp,
+  MapPin,
   Phone
 } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -24,10 +23,6 @@ const WhatsAppIcon = ({ className }) => (
 const Footer = () => {
   const navigate = useNavigate();
   const location = useLocation();
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   const handleNavigation = (item) => {
     if (item.isPage) {
@@ -64,9 +59,9 @@ const Footer = () => {
       'Web Development',
       'Mobile Apps',
       'AI Consulting',
-      'Data Engineering',
+      'Blockchain & Web3',
       'Cloud Solutions',
-      'Custom Software'
+      'Data Engineering'
     ],
     contact: [
       { icon: Mail, text: 'lraseemela@gmail.com', href: 'mailto:lraseemela@gmail.com' },
@@ -247,7 +242,7 @@ const Footer = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         transition={{ duration: 0.3 }}
-        className="fixed bottom-24 right-4 sm:right-8 w-12 h-12 sm:w-14 sm:h-14 whatsapp-btn text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center group"
+        className="fixed bottom-8 right-4 sm:right-8 w-12 h-12 sm:w-14 sm:h-14 whatsapp-btn text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center group"
         title="Chat on WhatsApp"
       >
         <WhatsAppIcon className="w-6 h-6 sm:w-7 sm:h-7" />
@@ -256,18 +251,6 @@ const Footer = () => {
         </span>
       </motion.a>
 
-      {/* Scroll to Top Button */}
-      <motion.button
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        transition={{ duration: 0.3, delay: 0.8 }}
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-4 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 icon-gradient text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 flex items-center justify-center"
-      >
-        <ArrowUp className="w-5 h-5 sm:w-6 sm:h-6" />
-      </motion.button>
     </footer>
   );
 };
