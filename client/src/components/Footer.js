@@ -72,7 +72,7 @@ const Footer = () => {
       { icon: Mail, text: 'lraseemela@gmail.com', href: 'mailto:lraseemela@gmail.com' },
       { icon: Phone, text: '+27 72 900 3705', href: 'tel:+27729003705' },
       { icon: MapPin, text: 'Sandton, Gauteng, South Africa', href: null },
-      { icon: Github, text: '@DynastyTech', href: 'https://github.com/DynastyTech' },
+      { icon: Github, text: 'DynastyTech', href: 'https://github.com/DynastyTech' },
       { icon: Linkedin, text: 'Lionel Raseemela', href: 'https://www.linkedin.com/in/lionel-raseemela-46090ab9/' }
     ]
   };
