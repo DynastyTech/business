@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Play, Users, Code, Star, Zap } from 'lucide-react';
+import { Play } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
@@ -28,13 +28,6 @@ const Hero = () => {
       },
     },
   };
-
-  const stats = [
-    { icon: Users, value: "30+", label: "Happy Clients" },
-    { icon: Code, value: "50+", label: "Projects Completed" },
-    { icon: Star, value: "4.8", label: "Client Rating" },
-    { icon: Zap, value: "24/7", label: "Support" },
-  ];
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 relative overflow-hidden pt-20 lg:pt-24">
@@ -89,33 +82,6 @@ const Hero = () => {
             </motion.button>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div
-            variants={itemVariants}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-2xl mx-auto"
-          >
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 0.8 + index * 0.1, type: "spring", stiffness: 200 }}
-                className="text-center"
-              >
-                <div className="flex justify-center mb-2">
-                  <div className="w-10 h-10 sm:w-14 sm:h-14 icon-gradient-box">
-                    <stat.icon className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
-                  </div>
-                </div>
-                <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-secondary-900 dark:text-white mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-xs sm:text-sm text-secondary-600 dark:text-gray-400">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
         </motion.div>
       </div>
 
