@@ -11,6 +11,8 @@ import Profile from './components/Profile';
 import ContactPage from './components/ContactPage';
 import SkillsPage from './components/SkillsPage';
 import ProjectsPage from './components/ProjectsPage';
+import BlogPage from './components/BlogPage';
+import BlogPost from './components/BlogPost';
 
 // Component to scroll to top on route change
 function ScrollToTop() {
@@ -64,6 +66,8 @@ function App() {
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
         </Routes>
         <Footer />
       </div>
