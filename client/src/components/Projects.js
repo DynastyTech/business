@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { 
   ExternalLink, 
-  Github, 
   Globe, 
   Building2, 
   FileText, 
@@ -47,7 +46,7 @@ const Projects = () => {
       technologies: ["TypeScript", "React", "Modern CSS", "Responsive Design"],
       category: "Web Application",
       icon: Sparkles,
-      github: "https://github.com/DynastyTech/fusion-aura",
+      github: null,
       live: "https://www.fusionaura.co.za/",
       featured: true
     },
@@ -58,7 +57,7 @@ const Projects = () => {
       technologies: ["JavaScript", "React", "Node.js", "Vercel"],
       category: "Web Application",
       icon: Building2,
-      github: "https://github.com/DynastyTech/munsoft-prototype",
+      github: null,
       live: "https://itna-munsoft.vercel.app/",
       featured: true
     },
@@ -66,10 +65,10 @@ const Projects = () => {
       title: "FIT Team Prototype",
       description: "A fitness and team management application designed to help teams track progress, set goals, and achieve fitness milestones together. Features interactive dashboards and progress tracking.",
       image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      technologies: ["JavaScript", "React", "Single Page App", "GitHub Pages"],
+      technologies: ["JavaScript", "React", "Single Page App", "Modern UI"],
       category: "Web Application",
       icon: Dumbbell,
-      github: "https://github.com/DynastyTech/fit-team-prototype",
+      github: null,
       live: "https://dynastytech.github.io/fit-team-prototype/#/",
       featured: true
     },
@@ -80,7 +79,7 @@ const Projects = () => {
       technologies: ["JavaScript", "HTML5", "CSS3", "Responsive Design"],
       category: "Web Application",
       icon: Globe,
-      github: "https://github.com/DynastyTech/Xcentric",
+      github: null,
       live: "https://dynastytech.github.io/Xcentric/",
       featured: false
     },
@@ -237,19 +236,6 @@ const Projects = () => {
 
                   {/* Action Buttons */}
                   <div className="flex gap-3">
-                    {project.github && (
-                      <motion.a
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 bg-secondary-100 dark:bg-gray-700 hover:bg-secondary-200 dark:hover:bg-gray-600 text-secondary-700 dark:text-gray-300 font-medium py-2 px-4 rounded-lg transition-colors duration-300 flex items-center justify-center"
-                      >
-                        <Github className="w-4 h-4 mr-2" />
-                        Code
-                      </motion.a>
-                    )}
                     {project.live && (
                       <motion.a
                         whileHover={{ scale: 1.05 }}
