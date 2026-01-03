@@ -5,10 +5,12 @@ import {
   ExternalLink, 
   Github, 
   Globe, 
-  Smartphone, 
-  Gamepad2, 
-  Newspaper,
-  Plus,
+  Building2, 
+  FileText, 
+  CreditCard,
+  Dumbbell,
+  Sparkles,
+  Lock,
   Star
 } from 'lucide-react';
 
@@ -39,74 +41,76 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Mzansi News App",
-      description: "A comprehensive news application developed using Flutter with API integration from NewsAPI.org. Keeps users updated about worldwide events with a modern, intuitive interface.",
-      image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      technologies: ["Flutter", "Dart", "NewsAPI", "Mobile Development"],
-      category: "Mobile App",
-      icon: Newspaper,
-      github: "https://github.com/DynastyTech/Mzansi_News_App",
-      live: null,
-      featured: true
-    },
-    {
-      title: "SOS Game",
-      description: "An engaging two-player SOS game built with Java. Features strategic gameplay mechanics and a clean, responsive user interface for an immersive gaming experience.",
-      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
-      technologies: ["Java", "Game Development", "Object-Oriented Programming", "Swing UI"],
-      category: "Game Development",
-      icon: Gamepad2,
-      github: "https://github.com/DynastyTech/SOS-Game",
-      live: null,
-      featured: true
-    },
-    {
-      title: "Coming Soon - Project 3",
-      description: "An innovative project that will showcase cutting-edge technology and creative problem-solving. Stay tuned for this exciting reveal.",
+      title: "Fusion Aura",
+      description: "A modern, elegant business website built with cutting-edge web technologies. Features stunning animations, responsive design, and optimized performance for an exceptional user experience.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80",
-      technologies: ["React", "Node.js", "AI/ML", "Cloud Computing"],
+      technologies: ["TypeScript", "React", "Modern CSS", "Responsive Design"],
       category: "Web Application",
-      icon: Plus,
-      github: null,
-      live: null,
-      featured: false
+      icon: Sparkles,
+      github: "https://github.com/DynastyTech/fusion-aura",
+      live: "https://www.fusionaura.co.za/",
+      featured: true
     },
     {
-      title: "Coming Soon - Project 4",
-      description: "A revolutionary application that will demonstrate advanced data engineering and machine learning capabilities.",
+      title: "ITNA Munsoft",
+      description: "A comprehensive business management platform with intuitive interface and powerful features. Built for efficiency and scalability to meet enterprise-level demands.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      technologies: ["Python", "TensorFlow", "Data Science", "API Development"],
-      category: "AI/ML",
-      icon: Plus,
-      github: null,
-      live: null,
-      featured: false
-    },
-    {
-      title: "Coming Soon - Project 5",
-      description: "An enterprise-level solution showcasing full-stack development expertise and scalable architecture design.",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      technologies: ["Full-Stack", "Microservices", "Docker", "AWS"],
-      category: "Enterprise",
-      icon: Plus,
-      github: null,
-      live: null,
-      featured: false
-    },
-    {
-      title: "Coming Soon - Project 6",
-      description: "A cutting-edge project that will push the boundaries of what's possible with modern web technologies.",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2025&q=80",
-      technologies: ["Next.js", "TypeScript", "GraphQL", "Real-time"],
+      technologies: ["JavaScript", "React", "Node.js", "Vercel"],
       category: "Web Application",
-      icon: Plus,
+      icon: Building2,
+      github: "https://github.com/DynastyTech/munsoft-prototype",
+      live: "https://itna-munsoft.vercel.app/",
+      featured: true
+    },
+    {
+      title: "FIT Team Prototype",
+      description: "A fitness and team management application designed to help teams track progress, set goals, and achieve fitness milestones together. Features interactive dashboards and progress tracking.",
+      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      technologies: ["JavaScript", "React", "Single Page App", "GitHub Pages"],
+      category: "Web Application",
+      icon: Dumbbell,
+      github: "https://github.com/DynastyTech/fit-team-prototype",
+      live: "https://dynastytech.github.io/fit-team-prototype/#/",
+      featured: true
+    },
+    {
+      title: "Xcentric",
+      description: "A sleek, modern website showcasing creative design and development capabilities. Features smooth animations, intuitive navigation, and a visually striking interface.",
+      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
+      technologies: ["JavaScript", "HTML5", "CSS3", "Responsive Design"],
+      category: "Web Application",
+      icon: Globe,
+      github: "https://github.com/DynastyTech/Xcentric",
+      live: "https://dynastytech.github.io/Xcentric/",
+      featured: false
+    },
+    {
+      title: "FNB Credit Application System",
+      description: "Enterprise-grade credit application processing system developed for First National Bank. Streamlines the credit approval workflow with automated validation and secure data handling.",
+      image: "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      technologies: ["Enterprise", "Banking", "Secure Systems", "Workflow Automation"],
+      category: "Enterprise",
+      icon: CreditCard,
       github: null,
       live: null,
-      featured: false
+      isNDA: true,
+      featured: true
+    },
+    {
+      title: "Nedbank Document Processing",
+      description: "Intelligent document processing solution developed for Nedbank. Automates document ingestion, classification, and data extraction using advanced processing techniques.",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80",
+      technologies: ["Enterprise", "Banking", "Document AI", "Data Processing"],
+      category: "Enterprise",
+      icon: FileText,
+      github: null,
+      live: null,
+      isNDA: true,
+      featured: true
     }
   ];
 
-  const categories = ["All", "Mobile App", "Game Development", "Web Application", "AI/ML", "Enterprise"];
+  const categories = ["All", "Web Application", "Enterprise"];
 
   return (
     <section id="projects" className="section-padding bg-white dark:bg-gray-900">
@@ -259,10 +263,10 @@ const Projects = () => {
                         Live Demo
                       </motion.a>
                     )}
-                    {!project.github && !project.live && (
-                      <div className="flex-1 bg-secondary-100 dark:bg-gray-700 text-secondary-500 dark:text-gray-400 font-medium py-2 px-4 rounded-lg flex items-center justify-center">
-                        <Plus className="w-4 h-4 mr-2" />
-                        Coming Soon
+                    {!project.github && !project.live && project.isNDA && (
+                      <div className="flex-1 bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 font-medium py-2 px-4 rounded-lg flex items-center justify-center">
+                        <Lock className="w-4 h-4 mr-2" />
+                        Protected by NDA
                       </div>
                     )}
                   </div>
