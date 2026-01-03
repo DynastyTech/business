@@ -1,11 +1,11 @@
 # Dynasty Tech Solutions - Robots.txt
-# https://dynastytechsolutions.co.za
+# https://dynastytech.co.za
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://dynastytechsolutions.co.za/sitemap.xml
+Sitemap: https://dynastytech.co.za/sitemap.xml
 
 # Disallow admin/private paths (if any in future)
 Disallow: /api/
