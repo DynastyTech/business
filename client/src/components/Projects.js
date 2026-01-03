@@ -42,7 +42,7 @@ const Projects = () => {
     {
       title: "Fusion Aura",
       description: "A fully functional e-commerce platform with complete shopping experience. Features product catalog, shopping cart, secure checkout, and modern responsive design for seamless online shopping.",
-      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "https://image.thum.io/get/width/800/https://www.fusionaura.co.za/",
       technologies: ["TypeScript", "React", "E-commerce", "Payment Integration"],
       category: "E-commerce",
       icon: Sparkles,
@@ -53,7 +53,7 @@ const Projects = () => {
     {
       title: "ITNA Munsoft",
       description: "A comprehensive business management platform with intuitive interface and powerful features. Built for efficiency and scalability to meet enterprise-level demands.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "https://image.thum.io/get/width/800/https://itna-munsoft.vercel.app/",
       technologies: ["JavaScript", "React", "Node.js", "Vercel"],
       category: "Web Application",
       icon: Building2,
@@ -64,7 +64,7 @@ const Projects = () => {
     {
       title: "FIT Team Prototype",
       description: "A fitness and team management application designed to help teams track progress, set goals, and achieve fitness milestones together. Features interactive dashboards and progress tracking.",
-      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "https://image.thum.io/get/width/800/https://dynastytech.github.io/fit-team-prototype/",
       technologies: ["JavaScript", "React", "Single Page App", "Modern UI"],
       category: "Web Application",
       icon: Dumbbell,
@@ -75,7 +75,7 @@ const Projects = () => {
     {
       title: "Xcentric",
       description: "A sleek, modern website showcasing creative design and development capabilities. Features smooth animations, intuitive navigation, and a visually striking interface.",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80",
+      image: "https://image.thum.io/get/width/800/https://dynastytech.github.io/Xcentric/",
       technologies: ["JavaScript", "HTML5", "CSS3", "Responsive Design"],
       category: "Web Application",
       icon: Globe,
