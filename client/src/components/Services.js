@@ -10,7 +10,8 @@ import {
   Users, 
   Database, 
   Cloud,
-  Coins
+  Coins,
+  Handshake
 } from 'lucide-react';
 
 // Import Swiper styles
@@ -27,6 +28,12 @@ const Services = () => {
   });
 
   const services = [
+    {
+      icon: Handshake,
+      title: "Free Consulting",
+      description: "We offer complimentary consulting sessions to ensure your business requirements are perfectly aligned with your vision before any development begins.",
+      features: ["Requirements Analysis", "Business Alignment", "Solution Planning", "No Obligation", "Expert Guidance"]
+    },
     {
       icon: Globe,
       title: "Full-Stack Web Development",
