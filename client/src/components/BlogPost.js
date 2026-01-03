@@ -111,18 +111,72 @@ const BlogPost = () => {
               className="lg:col-span-3"
             >
               <div 
-                className="prose prose-lg dark:prose-invert max-w-none
-                  prose-headings:text-gray-900 dark:prose-headings:text-white
-                  prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-4
-                  prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-3
-                  prose-h4:text-lg prose-h4:font-semibold prose-h4:mt-4 prose-h4:mb-2
-                  prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:mb-4 prose-p:leading-relaxed
-                  prose-ul:my-4 prose-ul:pl-6
-                  prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:mb-2
-                  prose-strong:text-gray-900 dark:prose-strong:text-white
-                  prose-a:text-primary-600 dark:prose-a:text-primary-400 prose-a:no-underline hover:prose-a:underline"
-                dangerouslySetInnerHTML={{ __html: post.content }}
-              />
+                className="blog-content max-w-none"
+                style={{
+                  lineHeight: '1.8',
+                  fontSize: '1.1rem',
+                }}
+              >
+                <style>{`
+                  .blog-content h2 {
+                    font-size: 1.75rem;
+                    font-weight: 700;
+                    margin-top: 2.5rem;
+                    margin-bottom: 1rem;
+                    color: inherit;
+                    line-height: 1.3;
+                  }
+                  .blog-content h3 {
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    margin-top: 2rem;
+                    margin-bottom: 0.75rem;
+                    color: inherit;
+                    line-height: 1.4;
+                  }
+                  .blog-content h4 {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                    margin-top: 1.5rem;
+                    margin-bottom: 0.5rem;
+                    color: inherit;
+                  }
+                  .blog-content p {
+                    margin-bottom: 1.25rem;
+                    line-height: 1.8;
+                  }
+                  .blog-content ul, .blog-content ol {
+                    margin: 1.25rem 0;
+                    padding-left: 1.5rem;
+                  }
+                  .blog-content li {
+                    margin-bottom: 0.5rem;
+                    line-height: 1.7;
+                  }
+                  .blog-content strong {
+                    font-weight: 600;
+                  }
+                  .dark .blog-content h2,
+                  .dark .blog-content h3,
+                  .dark .blog-content h4 {
+                    color: #fff;
+                  }
+                  .dark .blog-content p,
+                  .dark .blog-content li {
+                    color: #d1d5db;
+                  }
+                  .blog-content h2,
+                  .blog-content h3,
+                  .blog-content h4 {
+                    color: #111827;
+                  }
+                  .blog-content p,
+                  .blog-content li {
+                    color: #374151;
+                  }
+                `}</style>
+                <div dangerouslySetInnerHTML={{ __html: post.content }} />
+              </div>
 
               {/* Tags */}
               <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
