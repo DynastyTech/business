@@ -41,10 +41,10 @@ const Projects = () => {
   const projects = [
     {
       title: "Fusion Aura",
-      description: "A modern, elegant business website built with cutting-edge web technologies. Features stunning animations, responsive design, and optimized performance for an exceptional user experience.",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80",
-      technologies: ["TypeScript", "React", "Modern CSS", "Responsive Design"],
-      category: "Web Application",
+      description: "A fully functional e-commerce platform with complete shopping experience. Features product catalog, shopping cart, secure checkout, and modern responsive design for seamless online shopping.",
+      image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      technologies: ["TypeScript", "React", "E-commerce", "Payment Integration"],
+      category: "E-commerce",
       icon: Sparkles,
       github: null,
       live: "https://www.fusionaura.co.za/",
@@ -109,7 +109,7 @@ const Projects = () => {
     }
   ];
 
-  const categories = ["All", "Web Application", "Enterprise"];
+  const categories = ["All", "E-commerce", "Web Application", "Enterprise"];
 
   return (
     <section id="projects" className="section-padding bg-white dark:bg-gray-900">
