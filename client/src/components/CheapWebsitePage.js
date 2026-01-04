@@ -9,7 +9,6 @@ import {
   Search, 
   Zap,
   ArrowRight,
-  Star,
   MessageSquare
 } from 'lucide-react';
 
@@ -17,7 +16,7 @@ const CheapWebsitePage = () => {
   const packages = [
     {
       name: "Starter",
-      price: "R2,500",
+      price: "R2,000",
       description: "Perfect for small businesses & freelancers",
       features: [
         "3-5 Page Website",
@@ -31,7 +30,7 @@ const CheapWebsitePage = () => {
     },
     {
       name: "Professional",
-      price: "R5,500",
+      price: "R4,000",
       description: "Ideal for growing businesses",
       features: [
         "5-10 Page Website",
@@ -46,7 +45,7 @@ const CheapWebsitePage = () => {
     },
     {
       name: "E-commerce",
-      price: "R12,000",
+      price: "R10,000",
       description: "For online stores",
       features: [
         "Full Online Store",
@@ -56,6 +55,21 @@ const CheapWebsitePage = () => {
         "Order Tracking",
         "SSL Security",
         "14-Day Delivery"
+      ],
+      popular: false
+    },
+    {
+      name: "Mobile App",
+      price: "R15,000",
+      description: "iOS & Android applications",
+      features: [
+        "Cross-Platform App",
+        "iOS & Android",
+        "Custom UI Design",
+        "Push Notifications",
+        "API Integration",
+        "App Store Submission",
+        "21-Day Delivery"
       ],
       popular: false
     }
@@ -87,12 +101,12 @@ const CheapWebsitePage = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Cheap Website Development<br />
-              <span className="text-yellow-400">South Africa</span>
+              Transparent Pricing<br />
+              <span className="text-yellow-400">No Hidden Costs</span>
             </h1>
             <p className="text-xl md:text-2xl text-primary-100 mb-8 max-w-3xl mx-auto">
-              Professional websites from <strong>R2,500</strong>. Delivered in <strong>7 days</strong>. 
-              Serving Johannesburg, Cape Town, Durban & all SA provinces.
+              We believe in complete transparency. Professional websites from <strong>R2,000</strong>. 
+              Delivered in <strong>7 days</strong>. What you see is what you pay.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -115,39 +129,20 @@ const CheapWebsitePage = () => {
         </div>
       </section>
 
-      {/* Trust Badges */}
-      <section className="py-8 px-4 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600 dark:text-gray-400">
-            <div className="flex items-center gap-2">
-              <Check className="text-green-500" size={24} />
-              <span>100+ Websites Delivered</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Star className="text-yellow-500" size={24} />
-              <span>5-Star Reviews</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Shield className="text-blue-500" size={24} />
-              <span>Money-Back Guarantee</span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Affordable Website Packages
+              Our Packages
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400">
-              Transparent pricing. No hidden costs. Quality guaranteed.
+              Transparent pricing. No hidden costs. What you see is what you pay.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {packages.map((pkg, index) => (
               <motion.div
                 key={pkg.name}
@@ -156,7 +151,7 @@ const CheapWebsitePage = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden ${
-                  pkg.popular ? 'ring-2 ring-primary-500 scale-105' : ''
+                  pkg.popular ? 'ring-2 ring-primary-500' : ''
                 }`}
               >
                 {pkg.popular && (

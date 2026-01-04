@@ -24,8 +24,8 @@ const Navbar = () => {
     { name: 'Home', href: '#home', isPage: false },
     { name: 'About', href: '#about', isPage: false },
     { name: 'Services', href: '#services', isPage: false },
+    { name: 'Pricing', href: '/cheap-website-south-africa', isPage: true },
     { name: 'Projects', href: '/projects', isPage: true },
-    { name: 'Skills', href: '/skills', isPage: true },
     { name: 'Blog', href: '/blog', isPage: true },
     { name: 'Contact', href: '/contact', isPage: true },
   ];
