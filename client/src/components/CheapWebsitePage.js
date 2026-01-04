@@ -142,25 +142,25 @@ const CheapWebsitePage = () => {
             </p>
             <div className="flex flex-col gap-3 justify-center items-center">
               <div className="flex flex-wrap justify-center gap-3">
-                <div className="inline-flex items-center gap-2 px-5 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-5 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-full text-sm font-medium shadow-md">
                   <Shield size={16} />
                   50% deposit to start
                 </div>
-                <div className="inline-flex items-center gap-2 px-5 py-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-5 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-full text-sm font-medium shadow-md">
                   <Zap size={16} />
                   100% Custom Code
                 </div>
               </div>
               <div className="flex flex-wrap justify-center gap-3">
-                <div className="inline-flex items-center gap-2 px-5 py-2 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-5 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-full text-sm font-medium shadow-md">
                   <Check size={16} />
                   Free Domain Name
                 </div>
-                <div className="inline-flex items-center gap-2 px-5 py-2 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 rounded-full text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-5 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-full text-sm font-medium shadow-md">
                   <Check size={16} />
                   Free Web Hosting
                 </div>
-                <div className="inline-flex items-center gap-2 px-5 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">
+                <div className="inline-flex items-center gap-2 px-5 py-2 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-full text-sm font-medium shadow-md">
                   <Check size={16} />
                   1 Year Maintenance
                 </div>
