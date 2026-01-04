@@ -30,37 +30,65 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 lg:pt-24">
-      {/* Video Background */}
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 lg:pt-24 bg-gray-900">
+      {/* Animated Tech Background */}
       <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          className="w-full h-full object-cover"
-          style={{ objectFit: 'cover' }}
-        >
-          <source 
-            src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-city-made-in-an-old-computer-game-33031-large.mp4" 
-            type="video/mp4" 
+        {/* Base gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-primary-900"></div>
+        
+        {/* Animated grid lines */}
+        <div className="absolute inset-0 opacity-20">
+          <div 
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `
+                linear-gradient(to right, rgba(59, 130, 246, 0.3) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(59, 130, 246, 0.3) 1px, transparent 1px)
+              `,
+              backgroundSize: '60px 60px',
+              animation: 'gridMove 20s linear infinite',
+            }}
           />
-          <source 
-            src="https://assets.mixkit.co/videos/preview/mixkit-digital-network-data-travel-through-nodes-on-a-network-4614-large.mp4" 
-            type="video/mp4" 
-          />
-        </video>
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-900/75 to-primary-900/70"></div>
+        </div>
+
+        {/* Floating particles */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute rounded-full bg-cyan-400"
+              style={{
+                width: `${Math.random() * 6 + 2}px`,
+                height: `${Math.random() * 6 + 2}px`,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                opacity: Math.random() * 0.5 + 0.2,
+                animation: `float ${Math.random() * 10 + 10}s ease-in-out infinite`,
+                animationDelay: `${Math.random() * 5}s`,
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Glowing orbs */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-600 rounded-full filter blur-[120px] opacity-30 animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-600 rounded-full filter blur-[120px] opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-accent-600 rounded-full filter blur-[100px] opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden z-1">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-500 rounded-full mix-blend-overlay filter blur-xl opacity-30 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent-500 rounded-full mix-blend-overlay filter blur-xl opacity-30 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-40 left-40 w-80 h-80 bg-cyan-500 rounded-full mix-blend-overlay filter blur-xl opacity-30 animate-blob animation-delay-4000"></div>
-      </div>
+      {/* CSS Keyframes */}
+      <style>{`
+        @keyframes gridMove {
+          0% { transform: translate(0, 0); }
+          100% { transform: translate(60px, 60px); }
+        }
+        @keyframes float {
+          0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+          25% { transform: translateY(-20px) translateX(10px); opacity: 0.6; }
+          50% { transform: translateY(-10px) translateX(-10px); opacity: 0.4; }
+          75% { transform: translateY(-30px) translateX(5px); opacity: 0.7; }
+        }
+      `}</style>
 
       <div className="container-custom relative z-10 px-4 sm:px-6">
         <motion.div
