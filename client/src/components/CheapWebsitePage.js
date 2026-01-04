@@ -197,7 +197,6 @@ const CheapWebsitePage = () => {
                   </p>
                   <div className="mb-6">
                     <span className="text-4xl font-bold text-primary-600">{pkg.price}</span>
-                    <span className="text-gray-500 dark:text-gray-400"> once-off</span>
                   </div>
                   <ul className="space-y-3 mb-8">
                     {pkg.features.map((feature) => (
