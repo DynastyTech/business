@@ -38,17 +38,21 @@ const Hero = () => {
           loop
           muted
           playsInline
+          preload="auto"
           className="w-full h-full object-cover"
-          poster="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1920&q=80"
+          style={{ objectFit: 'cover' }}
         >
           <source 
-            src="https://cdn.coverr.co/videos/coverr-server-room-with-blue-lights-1584/1080p.mp4" 
+            src="https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-a-city-made-in-an-old-computer-game-33031-large.mp4" 
             type="video/mp4" 
           />
-          {/* Fallback for browsers that don't support video */}
+          <source 
+            src="https://assets.mixkit.co/videos/preview/mixkit-digital-network-data-travel-through-nodes-on-a-network-4614-large.mp4" 
+            type="video/mp4" 
+          />
         </video>
         {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/85 via-gray-900/80 to-primary-900/75"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-gray-900/75 to-primary-900/70"></div>
       </div>
 
       {/* Animated Background Elements */}
