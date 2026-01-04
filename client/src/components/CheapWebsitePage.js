@@ -16,7 +16,7 @@ const CheapWebsitePage = () => {
   const packages = [
     {
       name: "Starter",
-      price: "R2,000",
+      price: "From R2,000",
       description: "Perfect for small businesses & freelancers",
       features: [
         "3-5 Page Website",
@@ -30,7 +30,7 @@ const CheapWebsitePage = () => {
     },
     {
       name: "Professional",
-      price: "R4,000",
+      price: "From R4,000",
       description: "Ideal for growing businesses",
       features: [
         "5-10 Page Website",
@@ -45,7 +45,7 @@ const CheapWebsitePage = () => {
     },
     {
       name: "E-commerce",
-      price: "R10,000",
+      price: "From R10,000",
       description: "For online stores",
       features: [
         "Full Online Store",
@@ -60,7 +60,7 @@ const CheapWebsitePage = () => {
     },
     {
       name: "Mobile App",
-      price: "R15,000",
+      price: "From R15,000",
       description: "iOS & Android applications",
       features: [
         "Cross-Platform App",
@@ -137,8 +137,37 @@ const CheapWebsitePage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Our Packages
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">
               Transparent pricing. No hidden costs. What you see is what you pay.
+            </p>
+            <div className="flex flex-col gap-3 justify-center items-center">
+              <div className="flex flex-wrap justify-center gap-3">
+                <div className="inline-flex items-center gap-2 px-5 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">
+                  <Shield size={16} />
+                  50% deposit to start
+                </div>
+                <div className="inline-flex items-center gap-2 px-5 py-2 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 rounded-full text-sm font-medium">
+                  <Zap size={16} />
+                  100% Custom Code
+                </div>
+              </div>
+              <div className="flex flex-wrap justify-center gap-3">
+                <div className="inline-flex items-center gap-2 px-5 py-2 bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300 rounded-full text-sm font-medium">
+                  <Check size={16} />
+                  Free Domain Name
+                </div>
+                <div className="inline-flex items-center gap-2 px-5 py-2 bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 rounded-full text-sm font-medium">
+                  <Check size={16} />
+                  Free Web Hosting
+                </div>
+                <div className="inline-flex items-center gap-2 px-5 py-2 bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium">
+                  <Check size={16} />
+                  1 Year Maintenance
+                </div>
+              </div>
+            </div>
+            <p className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+              No WordPress, Wix, or 3rd party builders. Built from scratch. You own your code completely.
             </p>
           </div>
 
