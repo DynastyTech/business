@@ -13,6 +13,7 @@ import SkillsPage from './components/SkillsPage';
 import ProjectsPage from './components/ProjectsPage';
 import BlogPage from './components/BlogPage';
 import BlogPost from './components/BlogPost';
+import CheapWebsitePage from './components/CheapWebsitePage';
 
 // Component to scroll to top on route change
 function ScrollToTop() {
@@ -68,6 +69,7 @@ function App() {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/cheap-website-south-africa" element={<CheapWebsitePage />} />
         </Routes>
         <Footer />
       </div>
