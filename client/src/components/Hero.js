@@ -46,7 +46,7 @@ const Hero = () => {
                 linear-gradient(to bottom, rgba(59, 130, 246, 0.3) 1px, transparent 1px)
               `,
               backgroundSize: '60px 60px',
-              animation: 'gridMove 20s linear infinite',
+              animation: 'gridMove 4s linear infinite',
             }}
           />
         </div>
@@ -63,8 +63,8 @@ const Hero = () => {
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
                 opacity: Math.random() * 0.5 + 0.2,
-                animation: `float ${Math.random() * 10 + 10}s ease-in-out infinite`,
-                animationDelay: `${Math.random() * 5}s`,
+                animation: `float ${Math.random() * 2 + 2}s ease-in-out infinite`,
+                animationDelay: `${Math.random() * 1}s`,
               }}
             />
           ))}
