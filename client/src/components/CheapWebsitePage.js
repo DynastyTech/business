@@ -15,6 +15,20 @@ import {
 const CheapWebsitePage = () => {
   const packages = [
     {
+      name: "AI Integration",
+      price: "From R1,000",
+      description: "Add AI to your existing business",
+      features: [
+        "AI Chatbot Integration",
+        "Process Automation",
+        "AI-Powered Analytics",
+        "Custom AI Solutions",
+        "Training & Support",
+        "7-Day Delivery"
+      ],
+      popular: false
+    },
+    {
       name: "Starter",
       price: "From R2,000",
       description: "Perfect for small businesses & freelancers",
@@ -166,7 +180,7 @@ const CheapWebsitePage = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {packages.map((pkg, index) => (
               <motion.div
                 key={pkg.name}
