@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Award, Building, Globe, Target, Users, Zap, Heart, Rocket } from 'lucide-react';
+import { Award, Building, Globe, Target, Users } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const About = () => {
@@ -50,29 +50,6 @@ const About = () => {
       icon: Target,
       title: "100% Custom Code",
       description: "No templates. Every project built from scratch."
-    }
-  ];
-
-  const values = [
-    {
-      icon: Heart,
-      title: "Client First",
-      description: "Your success is our success. We go the extra mile."
-    },
-    {
-      icon: Rocket,
-      title: "Fast Delivery",
-      description: "7-14 day turnaround without compromising quality"
-    },
-    {
-      icon: Users,
-      title: "Transparent",
-      description: "No hidden costs. Clear communication throughout."
-    },
-    {
-      icon: Zap,
-      title: "Innovation",
-      description: "Cutting-edge technology that keeps you ahead"
     }
   ];
 
@@ -154,8 +131,8 @@ const About = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column - Image and Values */}
-          <motion.div variants={itemVariants} className="space-y-8">
+          {/* Right Column - Profile Image */}
+          <motion.div variants={itemVariants} className="flex items-center justify-center">
             {/* Profile Image */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -187,39 +164,6 @@ const About = () => {
                   </div>
                 </div>
               </motion.button>
-            </motion.div>
-
-            {/* Company Values */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="space-y-4"
-            >
-              <h3 className="text-xl font-semibold text-secondary-800 dark:text-white text-center">
-                What Sets Us Apart
-              </h3>
-              <div className="grid grid-cols-2 gap-3">
-                {values.map((value, index) => (
-                  <motion.div
-                    key={value.title}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.4, delay: 1.0 + index * 0.1 }}
-                    className="p-3 rounded-lg bg-secondary-50 dark:bg-gray-800 card-hover-enhanced text-center"
-                  >
-                    <div className="w-10 h-10 icon-gradient-box mx-auto mb-2">
-                      <value.icon className="w-5 h-5 text-white" />
-                    </div>
-                    <h4 className="font-semibold text-secondary-800 dark:text-white text-sm mb-1">
-                      {value.title}
-                    </h4>
-                    <p className="text-xs text-secondary-600 dark:text-gray-300">
-                      {value.description}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
             </motion.div>
           </motion.div>
         </motion.div>

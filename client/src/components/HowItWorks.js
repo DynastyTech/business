@@ -14,31 +14,26 @@ const HowItWorks = () => {
       icon: MessageSquare,
       title: "Free Consultation",
       description: "We discuss your vision, requirements, and goals. No obligation, just honest advice.",
-      color: "from-blue-500 to-cyan-500"
     },
     {
       icon: FileCheck,
       title: "Agreement & 50% Deposit",
       description: "Once we're aligned, you pay 50% to kick off the project. Clear scope, no surprises.",
-      color: "from-purple-500 to-pink-500"
     },
     {
       icon: Code,
       title: "Development",
       description: "We build your solution with 100% custom code. Regular updates keep you informed.",
-      color: "from-orange-500 to-red-500"
     },
     {
       icon: HeartHandshake,
       title: "Review & Refine",
       description: "You review the work, we make adjustments until you're completely satisfied.",
-      color: "from-green-500 to-emerald-500"
     },
     {
       icon: Rocket,
       title: "Launch & Support",
       description: "We launch your project and provide 1 year of free maintenance and support.",
-      color: "from-primary-500 to-accent-500"
     }
   ];
 
@@ -63,7 +58,7 @@ const HowItWorks = () => {
         {/* Desktop Timeline */}
         <div className="hidden lg:block relative">
           {/* Connection Line */}
-          <div className="absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 via-orange-500 via-green-500 to-primary-500 rounded-full"></div>
+          <div className="absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-primary-500 via-cyan-500 to-primary-500 rounded-full"></div>
 
           <div className="grid grid-cols-5 gap-4">
             {steps.map((step, index) => (
@@ -80,8 +75,8 @@ const HowItWorks = () => {
                 </div>
 
                 {/* Icon */}
-                <div className={`w-16 h-16 mx-auto mb-4 mt-8 rounded-2xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg`}>
-                  <step.icon className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 mx-auto mb-4 mt-8 rounded-2xl bg-gray-800 dark:bg-gray-700 flex items-center justify-center shadow-lg border border-gray-700 dark:border-gray-600">
+                  <step.icon className="w-8 h-8 text-primary-400" />
                 </div>
 
                 {/* Content */}
@@ -108,8 +103,8 @@ const HowItWorks = () => {
             >
               {/* Step indicator */}
               <div className="flex flex-col items-center">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center shadow-lg flex-shrink-0`}>
-                  <step.icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-xl bg-gray-800 dark:bg-gray-700 flex items-center justify-center shadow-lg flex-shrink-0 border border-gray-700 dark:border-gray-600">
+                  <step.icon className="w-6 h-6 text-primary-400" />
                 </div>
                 {index < steps.length - 1 && (
                   <div className="w-0.5 h-16 bg-gray-200 dark:bg-gray-700 mt-2"></div>
