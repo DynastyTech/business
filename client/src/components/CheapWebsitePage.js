@@ -300,7 +300,7 @@ const CheapWebsitePage = () => {
               },
               {
                 q: "Is there a catch with cheap website development?",
-                a: "No catch! Our prices are transparent. You get a fully functional, professional website. The only additional costs are domain (~R100/year) and hosting (~R50-150/month)."
+                a: "No catch! Our prices are transparent and all-inclusive. You get a fully functional, professional website with free domain, free hosting, and 1 year maintenance included."
               },
               {
                 q: "How long does it take to build my website?",
@@ -308,7 +308,7 @@ const CheapWebsitePage = () => {
               },
               {
                 q: "Do you offer support after the website is live?",
-                a: "Yes! We offer 30 days free support after launch. Extended support packages are available from R500/month."
+                a: "Yes! All our packages include 1 year of free maintenance and support. We'll keep your website running smoothly and help with any updates you need."
               },
               {
                 q: "Can I update the website myself?",
@@ -342,7 +342,7 @@ const CheapWebsitePage = () => {
             Ready to Get Your Cheap Website?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Get a professional website from R2,500. Free consultation included.
+            Get a professional website from R2,000. Free consultation included.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
