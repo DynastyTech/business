@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Award, Building, Globe, Target, Users, Zap } from 'lucide-react';
+import { Award, Building, Globe, Target, Users, Zap, Heart, Rocket } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const About = () => {
@@ -33,36 +33,46 @@ const About = () => {
   const highlights = [
     {
       icon: Award,
-      title: "Excellence",
-      description: "Founded by distinguished graduate with 18 distinctions"
+      title: "18 Distinctions",
+      description: "Distinguished graduate from Nelson Mandela University"
     },
     {
       icon: Building,
-      title: "Enterprise Experience",
-      description: "IBM South Africa expertise in Software, DevOps, Data & AI"
+      title: "IBM Experience",
+      description: "Software, DevOps, Data & AI expertise from IBM South Africa"
     },
     {
       icon: Globe,
       title: "Global Impact",
-      description: "Revolutionizing Civil Engineering Industry Worldwide"
+      description: "Building solutions for clients across South Africa & beyond"
     },
     {
       icon: Target,
-      title: "Quality Focus",
-      description: "Top-notch solutions that exceed client expectations"
+      title: "100% Custom Code",
+      description: "No templates. Every project built from scratch."
     }
   ];
 
   const values = [
     {
+      icon: Heart,
+      title: "Client First",
+      description: "Your success is our success. We go the extra mile."
+    },
+    {
+      icon: Rocket,
+      title: "Fast Delivery",
+      description: "7-14 day turnaround without compromising quality"
+    },
+    {
       icon: Users,
-      title: "Collaboration",
-      description: "Thriving in team environments with strong leadership"
+      title: "Transparent",
+      description: "No hidden costs. Clear communication throughout."
     },
     {
       icon: Zap,
       title: "Innovation",
-      description: "Pushing boundaries with cutting-edge technology"
+      description: "Cutting-edge technology that keeps you ahead"
     }
   ];
 
@@ -87,11 +97,15 @@ const About = () => {
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-3 sm:mb-4">
                 About <span className="gradient-text">Dynasty Tech</span>
               </h2>
-              <p className="text-sm sm:text-base lg:text-lg text-secondary-600 dark:text-gray-300 leading-relaxed">
-                Dynasty Tech Solutions is a cutting-edge technology consulting firm that specializes 
-                in software development, AI consulting, and digital transformation. Founded by a 
-                distinguished graduate with exceptional expertise from IBM South Africa and Nelson 
-                Mandela University, we ensure every project exceeds expectations.
+              <p className="text-sm sm:text-base lg:text-lg text-secondary-600 dark:text-gray-300 leading-relaxed mb-4">
+                I started Dynasty Tech with a simple belief: <strong>every South African business deserves 
+                a professional online presence, regardless of budget.</strong>
+              </p>
+              <p className="text-sm sm:text-base text-secondary-600 dark:text-gray-300 leading-relaxed">
+                After graduating from Nelson Mandela University with 18 distinctions and gaining invaluable 
+                experience at IBM South Africa working on enterprise-level solutions for major banks and 
+                corporations, I noticed a gap in the market. Small businesses were either paying too much 
+                or settling for cookie-cutter templates that didn't represent their unique brand.
               </p>
             </motion.div>
 
@@ -102,11 +116,12 @@ const About = () => {
               className="mb-6 sm:mb-8"
             >
               <h3 className="text-lg sm:text-xl font-semibold text-secondary-800 dark:text-gray-200 mb-3 sm:mb-4">
-                Our Mission
+                Why I Do This
               </h3>
               <p className="text-sm sm:text-base text-secondary-600 dark:text-gray-300 leading-relaxed">
-                To revolutionize industries through innovative technology solutions. Our commitment to quality, innovation, and 
-                client success drives everything we do.
+                I believe technology should empower, not overwhelm. That's why I offer <strong>free consultations</strong> to 
+                understand your vision, <strong>transparent pricing</strong> with no hidden costs, and <strong>1 year of 
+                free maintenance</strong> so you can focus on what you do best — running your business.
               </p>
             </motion.div>
 
@@ -182,28 +197,26 @@ const About = () => {
               className="space-y-4"
             >
               <h3 className="text-xl font-semibold text-secondary-800 dark:text-white text-center">
-                Our Core Values
+                What Sets Us Apart
               </h3>
-              <div className="space-y-3">
+              <div className="grid grid-cols-2 gap-3">
                 {values.map((value, index) => (
                   <motion.div
                     key={value.title}
-                    initial={{ opacity: 0, x: 30 }}
-                    animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={inView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.4, delay: 1.0 + index * 0.1 }}
-                    className="flex items-center space-x-3 p-3 rounded-lg bg-secondary-50 dark:bg-gray-800 card-hover-enhanced"
+                    className="p-3 rounded-lg bg-secondary-50 dark:bg-gray-800 card-hover-enhanced text-center"
                   >
-                    <div className="w-10 h-10 icon-gradient-box flex-shrink-0">
+                    <div className="w-10 h-10 icon-gradient-box mx-auto mb-2">
                       <value.icon className="w-5 h-5 text-white" />
                     </div>
-                    <div>
-                      <h4 className="font-semibold text-secondary-800 dark:text-white text-sm">
-                        {value.title}
-                      </h4>
-                      <p className="text-xs text-secondary-600 dark:text-gray-300">
-                        {value.description}
-                      </p>
-                    </div>
+                    <h4 className="font-semibold text-secondary-800 dark:text-white text-sm mb-1">
+                      {value.title}
+                    </h4>
+                    <p className="text-xs text-secondary-600 dark:text-gray-300">
+                      {value.description}
+                    </p>
                   </motion.div>
                 ))}
               </div>

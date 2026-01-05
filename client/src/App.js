@@ -5,6 +5,9 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
+import Testimonials from './components/Testimonials';
+import HowItWorks from './components/HowItWorks';
+import ClientLogos from './components/ClientLogos';
 import Footer from './components/Footer';
 import ThemeToggle from './components/ThemeToggle';
 import Profile from './components/Profile';
@@ -14,6 +17,7 @@ import ProjectsPage from './components/ProjectsPage';
 import BlogPage from './components/BlogPage';
 import BlogPost from './components/BlogPost';
 import CheapWebsitePage from './components/CheapWebsitePage';
+import FAQPage from './components/FAQPage';
 
 // Component to scroll to top on route change
 function ScrollToTop() {
@@ -59,8 +63,11 @@ function App() {
           <Route path="/" element={
             <>
               <Hero />
+              <ClientLogos />
               <About />
               <Services />
+              <HowItWorks />
+              <Testimonials />
             </>
           } />
           <Route path="/profile" element={<Profile />} />
@@ -70,6 +77,7 @@ function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/cheap-website-south-africa" element={<CheapWebsitePage />} />
+          <Route path="/faq" element={<FAQPage />} />
         </Routes>
         <Footer />
       </div>
