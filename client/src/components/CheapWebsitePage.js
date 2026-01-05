@@ -84,11 +84,6 @@ const CheapWebsitePage = () => {
     { icon: MessageSquare, title: "Free Consulting", description: "We align with your business goals first" },
   ];
 
-  const cities = [
-    "Johannesburg", "Cape Town", "Durban", "Pretoria", "Port Elizabeth",
-    "Bloemfontein", "Nelspruit", "Polokwane", "Kimberley", "East London",
-    "Rustenburg", "Pietermaritzburg", "Sandton", "Centurion", "Soweto"
-  ];
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 pt-20">
@@ -260,30 +255,6 @@ const CheapWebsitePage = () => {
         </div>
       </section>
 
-      {/* Local SEO Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Cheap Web Development Across South Africa
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">
-              We serve businesses in all major cities and provinces
-            </p>
-          </div>
-
-          <div className="flex flex-wrap justify-center gap-3">
-            {cities.map((city) => (
-              <span
-                key={city}
-                className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm"
-              >
-                {city}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
       <section className="py-20 px-4 bg-gray-50 dark:bg-gray-800">

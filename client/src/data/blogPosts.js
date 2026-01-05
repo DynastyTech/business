@@ -4,65 +4,69 @@ export const blogPosts = [
     id: 1,
     slug: "how-much-does-website-cost-south-africa-2026",
     title: "How Much Does a Website Cost in South Africa in 2026?",
-    excerpt: "Discover the real costs of website development in South Africa. From budget-friendly options starting at R2,000 to enterprise solutions - we break down everything you need to know.",
+    excerpt: "Discover the real costs of website development in South Africa. From budget-friendly options starting at R2,000 to mobile apps - we break down everything you need to know.",
     content: `
       <h2>Understanding Website Costs in South Africa</h2>
       <p>If you're a business owner in South Africa looking to establish an online presence, one of your first questions is likely: "How much will a website cost me?" The answer varies significantly based on your needs, but we're here to give you a transparent breakdown.</p>
       
-      <h3>Website Pricing Tiers in South Africa</h3>
+      <h3>Dynasty Tech Pricing</h3>
       
-      <h4>1. Basic Website (R2,000 - R8,000)</h4>
-      <p>Perfect for small businesses, freelancers, and startups who need a simple online presence. This typically includes:</p>
+      <h4>1. Starter Website (From R2,000)</h4>
+      <p>Perfect for small businesses, freelancers, and startups who need a simple online presence:</p>
       <ul>
         <li>3-5 pages (Home, About, Services, Contact)</li>
         <li>Mobile-responsive design</li>
         <li>Basic SEO setup</li>
         <li>Contact form</li>
         <li>Social media links</li>
+        <li>Free domain, hosting & 1 year maintenance</li>
       </ul>
       
-      <h4>2. Professional Business Website (R8,000 - R25,000)</h4>
+      <h4>2. Professional Website (From R4,000)</h4>
       <p>Ideal for established businesses wanting a more polished online presence:</p>
       <ul>
-        <li>5-15 pages with custom design</li>
-        <li>Content Management System (CMS)</li>
+        <li>5-10 pages with custom design</li>
         <li>Advanced SEO optimization</li>
         <li>Blog functionality</li>
         <li>Google Analytics integration</li>
         <li>Email integration</li>
+        <li>Free domain, hosting & 1 year maintenance</li>
       </ul>
       
-      <h4>3. E-commerce Website (R15,000 - R50,000+)</h4>
+      <h4>3. E-commerce Website (From R10,000)</h4>
       <p>For businesses selling products online:</p>
       <ul>
+        <li>Full online store</li>
         <li>Product catalog and shopping cart</li>
-        <li>Payment gateway integration (PayFast, Yoco, etc.)</li>
+        <li>Payment gateway integration</li>
         <li>Inventory management</li>
         <li>Order tracking</li>
-        <li>Customer accounts</li>
+        <li>Free domain, hosting & 1 year maintenance</li>
       </ul>
       
-      <h4>4. Custom Web Applications (R50,000+)</h4>
-      <p>For businesses needing specialized functionality:</p>
+      <h4>4. Mobile Application (From R15,000)</h4>
+      <p>For businesses needing iOS and Android apps:</p>
       <ul>
-        <li>Custom features and integrations</li>
-        <li>User authentication systems</li>
-        <li>Database management</li>
-        <li>API development</li>
-        <li>Ongoing maintenance and support</li>
+        <li>Cross-platform development</li>
+        <li>Custom UI design</li>
+        <li>Push notifications</li>
+        <li>API integration</li>
+        <li>App store submission</li>
+        <li>1 year maintenance included</li>
       </ul>
       
       <h3>Why Choose Dynasty Tech Solutions?</h3>
       <p>At Dynasty Tech Solutions, we offer competitive pricing without compromising on quality. Our 7-day website delivery guarantee means you can get online faster than ever. Plus, we offer <strong>free consulting</strong> to ensure your project aligns perfectly with your business goals.</p>
       
-      <h3>Hidden Costs to Consider</h3>
-      <p>When budgeting for your website, don't forget these ongoing costs:</p>
+      <h3>What's Included at Dynasty Tech?</h3>
+      <p>At Dynasty Tech Solutions, all our packages include:</p>
       <ul>
-        <li><strong>Domain name:</strong> R80 - R200/year</li>
-        <li><strong>Hosting:</strong> R50 - R500/month</li>
-        <li><strong>SSL Certificate:</strong> Often free with hosting</li>
-        <li><strong>Maintenance:</strong> R500 - R2,000/month (optional)</li>
+        <li><strong>Free Domain Name:</strong> Included with every package</li>
+        <li><strong>Free Web Hosting:</strong> Included with every package</li>
+        <li><strong>SSL Certificate:</strong> Included for security</li>
+        <li><strong>1 Year Maintenance:</strong> Free support and updates</li>
       </ul>
+      <p>No hidden costs. What you see is what you pay.</p>
       
       <h3>Get a Free Quote Today</h3>
       <p>Ready to get started? Contact Dynasty Tech Solutions for a free, no-obligation quote. We serve businesses across Johannesburg, Cape Town, Durban, Pretoria, and all of South Africa.</p>
