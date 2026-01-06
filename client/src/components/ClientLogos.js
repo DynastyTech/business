@@ -9,11 +9,10 @@ const ClientLogos = () => {
   });
 
   const clients = [
-    { name: "IBM", initial: "IBM" },
-    { name: "FNB", initial: "FNB" },
-    { name: "Nedbank", initial: "NB" },
-    { name: "Nelson Mandela University", initial: "NMU" },
-    { name: "Enterprise Clients", initial: "EC" },
+    { name: "IBM", logo: "/Logos/IBM.png" },
+    { name: "FNB", logo: "/Logos/FNB.png" },
+    { name: "Nedbank", logo: "/Logos/Nedbank.png" },
+    { name: "Nelson Mandela University", logo: "/Logos/NMU.png" },
   ];
 
   return (
@@ -35,7 +34,7 @@ const ClientLogos = () => {
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-wrap justify-center items-center gap-8 md:gap-12"
+          className="flex flex-wrap justify-center items-center gap-8 md:gap-16"
         >
           {clients.map((client, index) => (
             <motion.div
@@ -45,10 +44,12 @@ const ClientLogos = () => {
               transition={{ duration: 0.4, delay: 0.1 * index }}
               className="flex flex-col items-center"
             >
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-white dark:bg-gray-700 rounded-xl shadow-md flex items-center justify-center hover:shadow-lg transition-shadow">
-                <span className="text-lg md:text-xl font-bold text-gray-700 dark:text-gray-300">
-                  {client.initial}
-                </span>
+              <div className="h-16 md:h-20 flex items-center justify-center grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-300">
+                <img 
+                  src={client.logo} 
+                  alt={client.name} 
+                  className="h-full w-auto object-contain max-w-[120px] md:max-w-[150px]"
+                />
               </div>
               <span className="mt-2 text-xs text-gray-500 dark:text-gray-400">
                 {client.name}
