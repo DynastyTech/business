@@ -9,7 +9,7 @@
       "type": "image/x-icon"
     },
     {
-      "src": "Logos/DynastyTechLogo-Symbol.png",
+      "src": "Logos/DynastyTechLogo-Symbol-192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
@@ -36,14 +36,14 @@
       "short_name": "Contact",
       "description": "Get in touch with Dynasty Tech",
       "url": "/contact",
-      "icons": [{ "src": "Logos/DynastyTechLogo-Symbol.png", "sizes": "192x192" }]
+      "icons": [{ "src": "Logos/DynastyTechLogo-Symbol-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Our Projects",
       "short_name": "Projects",
       "description": "View our portfolio",
       "url": "/projects",
-      "icons": [{ "src": "Logos/DynastyTechLogo-Symbol.png", "sizes": "192x192" }]
+      "icons": [{ "src": "Logos/DynastyTechLogo-Symbol-192.png", "sizes": "192x192" }]
     }
   ]
 }
