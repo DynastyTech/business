@@ -45,12 +45,40 @@ function App() {
     return (
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary-400 mx-auto mb-6"></div>
-          <img
-            src="/Logos/DynastyTechLogo-website.png"
-            alt="Dynasty Tech Solutions"
-            className="w-64 sm:w-80 md:w-96 h-auto mx-auto animate-pulse"
-          />
+          <style>{`
+            @keyframes dt-float {
+              0%, 100% { transform: translateY(0) scale(1); }
+              50% { transform: translateY(-10px) scale(1.02); }
+            }
+            @keyframes dt-glow {
+              0%, 100% { opacity: 0.45; transform: scale(0.95); }
+              50% { opacity: 0.9; transform: scale(1.08); }
+            }
+            @keyframes dt-sweep {
+              0% { transform: translateX(-120%); }
+              100% { transform: translateX(120%); }
+            }
+            .loader-float {
+              animation: dt-float 3.2s ease-in-out infinite;
+            }
+            .loader-glow {
+              animation: dt-glow 3.2s ease-in-out infinite;
+            }
+            .loader-sweep {
+              animation: dt-sweep 2.2s linear infinite;
+            }
+          `}</style>
+          <div className="relative inline-flex items-center justify-center">
+            <div className="loader-glow absolute inset-0 -m-10 rounded-full bg-cyan-400/20 blur-3xl"></div>
+            <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl">
+              <div className="loader-sweep absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-cyan-300/25 to-transparent"></div>
+            </div>
+            <img
+              src="/Logos/DynastyTechLogo-website.png"
+              alt="Dynasty Tech Solutions"
+              className="loader-float relative w-[32rem] sm:w-[40rem] md:w-[48rem] max-w-[92vw] h-auto mx-auto"
+            />
+          </div>
         </div>
       </div>
     );
