@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
+import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { blogPosts, getAllCategories } from '../data/blogPosts';
 
 const BlogPage = () => {

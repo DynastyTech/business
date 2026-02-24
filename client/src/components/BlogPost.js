@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, ArrowLeft, User, Tag, Share2, Linkedin, Twitter, Facebook } from 'lucide-react';
 import { getPostBySlug, getRecentPosts } from '../data/blogPosts';
 
 const BlogPost = () => {
   const { slug } = useParams();
-  const navigate = useNavigate();
   const post = getPostBySlug(slug);
   const recentPosts = getRecentPosts(3).filter(p => p.slug !== slug);
 

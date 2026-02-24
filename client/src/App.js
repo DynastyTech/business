@@ -9,7 +9,6 @@ import Testimonials from './components/Testimonials';
 import HowItWorks from './components/HowItWorks';
 import ClientLogos from './components/ClientLogos';
 import Footer from './components/Footer';
-import ThemeToggle from './components/ThemeToggle';
 import Profile from './components/Profile';
 import ContactPage from './components/ContactPage';
 import SkillsPage from './components/SkillsPage';
@@ -37,7 +36,7 @@ function App() {
     // Simulate loading time for smooth animations
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -46,9 +45,12 @@ function App() {
     return (
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary-400 mx-auto mb-4"></div>
-          <h2 className="text-2xl font-bold text-white">Dynasty Tech Solutions</h2>
-          <p className="text-gray-400">Loading...</p>
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary-400 mx-auto mb-6"></div>
+          <img
+            src="/Logos/DynastyTechLogo-website.png"
+            alt="Dynasty Tech Solutions"
+            className="w-64 sm:w-80 md:w-96 h-auto mx-auto animate-pulse"
+          />
         </div>
       </div>
     );

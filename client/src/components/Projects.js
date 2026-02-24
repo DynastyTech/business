@@ -109,8 +109,6 @@ const Projects = () => {
     }
   ];
 
-  const categories = ["All", "E-commerce", "Web Application", "Enterprise"];
-
   return (
     <section id="projects" className="section-padding bg-white dark:bg-gray-900">
       <div className="container-custom">
