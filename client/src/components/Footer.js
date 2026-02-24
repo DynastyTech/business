@@ -97,7 +97,7 @@ const Footer = () => {
                   <img 
                     src="/Logos/DynastyTechLogo-Symbol.png" 
                     alt="Dynasty Tech symbol" 
-                    className="w-10 h-10 rounded-xl"
+                    className="h-10 w-auto object-contain flex-shrink-0"
                   />
                   <img
                     src="/Logos/DynastyTechLogo-text.png"

@@ -77,7 +77,7 @@ const Navbar = () => {
             <img 
               src="/Logos/DynastyTechLogo-Symbol.png" 
               alt="Dynasty Tech symbol" 
-              className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl"
+              className="h-8 sm:h-10 w-auto object-contain flex-shrink-0"
             />
             <img
               src="/Logos/DynastyTechLogo-text.png"
