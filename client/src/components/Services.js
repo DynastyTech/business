@@ -93,10 +93,6 @@ const Services = () => {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-secondary-900 dark:text-white mb-3 sm:mb-4">
             Our <span className="gradient-text">Services</span>
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-secondary-600 dark:text-gray-300 max-w-3xl mx-auto">
-            From concept to deployment, we deliver comprehensive technology solutions that drive 
-            business growth and innovation. Our expertise spans the entire technology spectrum.
-          </p>
         </motion.div>
 
         {/* Services Carousel */}
@@ -129,7 +125,7 @@ const Services = () => {
             loop={true}
             className="services-swiper"
           >
-            {services.map((service, index) => (
+            {services.map((service) => (
               <SwiperSlide key={service.title}>
                 <motion.div
                   className="service-card-carousel"
