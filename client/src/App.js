@@ -30,64 +30,75 @@ function ScrollToTop() {
 }
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoaderVisible, setIsLoaderVisible] = useState(true);
+  const [isRevealing, setIsRevealing] = useState(false);
 
   useEffect(() => {
-    // Simulate loading time for smooth animations
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 4000);
+    const SWEEP_DURATION_MS = 4800;
+    const REVEAL_DURATION_MS = 950;
 
-    return () => clearTimeout(timer);
+    // Start reveal exactly when the sweep reaches the end.
+    const revealTimer = setTimeout(() => {
+      setIsRevealing(true);
+    }, SWEEP_DURATION_MS);
+
+    // Remove loader after the circular reveal finishes.
+    const hideLoaderTimer = setTimeout(() => {
+      setIsLoaderVisible(false);
+    }, SWEEP_DURATION_MS + REVEAL_DURATION_MS);
+
+    return () => {
+      clearTimeout(revealTimer);
+      clearTimeout(hideLoaderTimer);
+    };
   }, []);
-
-  if (isLoading) {
-    return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-center">
-          <style>{`
-            @keyframes dt-float {
-              0%, 100% { transform: translateY(0) scale(1); }
-              50% { transform: translateY(-10px) scale(1.02); }
-            }
-            @keyframes dt-glow {
-              0%, 100% { opacity: 0.45; transform: scale(0.95); }
-              50% { opacity: 0.9; transform: scale(1.08); }
-            }
-            @keyframes dt-sweep {
-              0% { transform: translateX(-120%); }
-              100% { transform: translateX(120%); }
-            }
-            .loader-float {
-              animation: dt-float 3.2s ease-in-out infinite;
-            }
-            .loader-glow {
-              animation: dt-glow 3.2s ease-in-out infinite;
-            }
-            .loader-sweep {
-              animation: dt-sweep 2.2s linear infinite;
-            }
-          `}</style>
-          <div className="relative inline-flex items-center justify-center">
-            <div className="loader-glow absolute inset-0 -m-10 rounded-full bg-cyan-400/20 blur-3xl"></div>
-            <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl">
-              <div className="loader-sweep absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-cyan-300/25 to-transparent"></div>
-            </div>
-            <img
-              src="/Logos/DynastyTechLogo-website.png"
-              alt="Dynasty Tech Solutions"
-              className="loader-float relative w-[32rem] sm:w-[40rem] md:w-[48rem] max-w-[92vw] h-auto mx-auto"
-            />
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <ThemeProvider>
       <ScrollToTop />
-      <div className="App overflow-x-hidden">
+      <style>{`
+        @keyframes dt-float {
+          0%, 100% { transform: translateY(0) scale(1); }
+          50% { transform: translateY(-10px) scale(1.02); }
+        }
+        @keyframes dt-glow {
+          0%, 100% { opacity: 0.45; transform: scale(0.95); }
+          50% { opacity: 0.9; transform: scale(1.08); }
+        }
+        @keyframes dt-sweep {
+          0% { transform: translateX(-120%); }
+          100% { transform: translateX(120%); }
+        }
+        @keyframes dt-loader-fade {
+          from { opacity: 1; }
+          to { opacity: 0; }
+        }
+        @keyframes dt-content-reveal {
+          0% { clip-path: circle(0% at 50% 50%); opacity: 0.65; }
+          100% { clip-path: circle(150% at 50% 50%); opacity: 1; }
+        }
+        .loader-float {
+          animation: dt-float 3.2s ease-in-out infinite;
+        }
+        .loader-glow {
+          animation: dt-glow 3.2s ease-in-out infinite;
+        }
+        .loader-sweep {
+          animation: dt-sweep 4.8s ease-in-out forwards;
+        }
+        .loader-overlay-exit {
+          animation: dt-loader-fade 0.95s ease forwards;
+        }
+        .app-hidden-until-reveal {
+          visibility: hidden;
+        }
+        .app-reveal-circle {
+          visibility: visible;
+          animation: dt-content-reveal 0.95s ease-out forwards;
+        }
+      `}</style>
+
+      <div className={`App overflow-x-hidden ${isLoaderVisible && !isRevealing ? 'app-hidden-until-reveal' : ''} ${isRevealing ? 'app-reveal-circle' : ''}`}>
         <Navbar />
         <Routes>
           <Route path="/" element={
@@ -111,6 +122,24 @@ function App() {
         </Routes>
         <Footer />
       </div>
+
+      {isLoaderVisible && (
+        <div className={`fixed inset-0 z-[9999] min-h-screen bg-gray-900 flex items-center justify-center ${isRevealing ? 'loader-overlay-exit' : ''}`}>
+          <div className="text-center">
+            <div className="relative inline-flex items-center justify-center">
+              <div className="loader-glow absolute inset-0 -m-10 rounded-full bg-cyan-400/20 blur-3xl"></div>
+              <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl">
+                <div className="loader-sweep absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-cyan-300/25 to-transparent"></div>
+              </div>
+              <img
+                src="/Logos/DynastyTechLogo-website.png"
+                alt="Dynasty Tech Solutions"
+                className="loader-float relative w-[32rem] sm:w-[40rem] md:w-[48rem] max-w-[92vw] h-auto mx-auto"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </ThemeProvider>
   );
 }
