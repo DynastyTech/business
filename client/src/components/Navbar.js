@@ -75,13 +75,15 @@ const Navbar = () => {
             className="flex items-center space-x-2 flex-shrink-0"
           >
             <img 
-              src="/logo.svg" 
-              alt="Dynasty Tech Logo" 
+              src="/Logos/DynastyTechLogo-Symbol.png" 
+              alt="Dynasty Tech symbol" 
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl"
             />
-            <span className="text-lg sm:text-xl lg:text-2xl font-bold text-primary-600">
-              Dynasty Tech
-            </span>
+            <img
+              src="/Logos/DynastyTechLogo-text.png"
+              alt="Dynasty Tech"
+              className="h-5 sm:h-6 lg:h-7 w-auto"
+            />
           </motion.button>
 
           {/* Desktop Navigation */}

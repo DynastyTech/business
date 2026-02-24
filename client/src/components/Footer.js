@@ -95,13 +95,15 @@ const Footer = () => {
               >
                 <div className="flex items-center space-x-3 mb-4">
                   <img 
-                    src="/logo.svg" 
-                    alt="Dynasty Tech Logo" 
+                    src="/Logos/DynastyTechLogo-Symbol.png" 
+                    alt="Dynasty Tech symbol" 
                     className="w-10 h-10 rounded-xl"
                   />
-                  <span className="text-2xl font-bold text-white">
-                    Dynasty Tech
-                  </span>
+                  <img
+                    src="/Logos/DynastyTechLogo-text.png"
+                    alt="Dynasty Tech"
+                    className="h-7 w-auto"
+                  />
                 </div>
                 <p className="text-secondary-300 leading-relaxed max-w-md">
                   Transforming businesses through innovative technology solutions. We deliver 
