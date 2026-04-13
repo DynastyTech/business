@@ -143,7 +143,7 @@ const ClientLogos = () => {
                   >
                     <div
                       className={`h-16 md:h-20 flex items-center justify-center transition-all duration-300 ${
-                        isFocused ? 'grayscale-0 opacity-100 scale-[1.2]' : 'grayscale opacity-60 scale-100'
+                        isFocused ? 'grayscale-0 opacity-100 scale-[1.3]' : 'grayscale opacity-60 scale-100'
                       }`}
                     >
                       <img
