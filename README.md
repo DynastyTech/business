@@ -168,6 +168,9 @@ When a visitor submits **Start Your Project**:
 1. An enquiry email is sent to `CONTACT_RECEIVER_EMAIL`.
 2. A branded confirmation copy is sent to the visitor's email.
 3. Both emails are generated from custom HTML templates in `server/emailTemplates.js`.
+4. The same logic is reused by:
+   - Express route: `server/index.js` (`POST /api/contact`)
+   - Vercel serverless route: `api/contact.js` (`POST /api/contact`)
 
 API endpoint: `POST /api/contact`
 
