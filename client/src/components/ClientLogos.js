@@ -124,7 +124,7 @@ const ClientLogos = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="relative"
         >
-          <div ref={viewportRef} className="overflow-hidden">
+          <div ref={viewportRef} className="overflow-hidden py-4 md:py-5">
             <motion.div
               ref={trackRef}
               style={{ x }}
@@ -139,10 +139,10 @@ const ClientLogos = () => {
                     ref={(el) => {
                       itemRefs.current[index] = el;
                     }}
-                    className="w-36 sm:w-40 md:w-48 flex-shrink-0 flex flex-col items-center"
+                    className="w-36 sm:w-40 md:w-48 flex-shrink-0 flex flex-col items-center py-1"
                   >
                     <div
-                      className={`h-16 md:h-20 flex items-center justify-center transition-all duration-300 ${
+                      className={`h-20 md:h-24 flex items-center justify-center transition-all duration-300 ${
                         isFocused ? 'grayscale-0 opacity-100 scale-[1.3]' : 'grayscale opacity-60 scale-100'
                       }`}
                     >
