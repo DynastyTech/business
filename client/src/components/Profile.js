@@ -52,7 +52,7 @@ const Profile = () => {
     {
       role: "Platform Engineer",
       company: "IBM South Africa",
-      period: "2023 - Present",
+      period: "2025 - Present",
       description: "Specializing in Software, DevOps, Data & AI, and Integration technologies.",
       achievements: ["Leading platform development initiatives", "Implementing DevOps best practices", "AI and data integration solutions"]
     }
