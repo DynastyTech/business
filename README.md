@@ -25,6 +25,7 @@ A modern, responsive portfolio website for Dynasty Tech Solutions & Consulting P
 ### Backend
 - **Node.js** - Server-side JavaScript runtime
 - **Express.js** - Fast, unopinionated web framework
+- **Nodemailer** - SMTP email delivery for contact enquiries
 - **CORS** - Cross-origin resource sharing
 - **Helmet** - Security middleware
 - **Compression** - Response compression
@@ -144,7 +145,31 @@ Create a `.env` file in the root directory:
 ```env
 PORT=5000
 NODE_ENV=production
+SITE_NAME=Dynasty Tech Solutions
+
+# SMTP email integration (required for /api/contact)
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_SECURE=false
+SMTP_USER=your-smtp-username
+SMTP_PASS=your-smtp-password
+SMTP_FROM_EMAIL=hello@dynastytech.co.za
+SMTP_FROM_NAME=Dynasty Tech Solutions
+CONTACT_RECEIVER_EMAIL=lraseemela@gmail.com
+CONTACT_REPLY_TO=lraseemela@gmail.com
+
+# Optional for local frontend -> backend calls
+# REACT_APP_API_BASE_URL=http://localhost:5000
 ```
+
+## ✉️ Contact Form Email Flow
+
+When a visitor submits **Start Your Project**:
+1. An enquiry email is sent to `CONTACT_RECEIVER_EMAIL`.
+2. A branded confirmation copy is sent to the visitor's email.
+3. Both emails are generated from custom HTML templates in `server/emailTemplates.js`.
+
+API endpoint: `POST /api/contact`
 
 ## 🔧 Available Scripts
 

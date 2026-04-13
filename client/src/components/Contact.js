@@ -31,6 +31,11 @@ const Contact = () => {
     success: false,
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const apiBaseUrl =
+    process.env.REACT_APP_API_BASE_URL ||
+    (process.env.NODE_ENV === 'development' ? 'http://localhost:5000' : '');
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -42,10 +47,37 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setFormStatus({ submitted: true, success: true, message: 'Thank you! Your message has been sent successfully.' });
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
+
+    if (isSubmitting) {
+      return;
+    }
+
+    setIsSubmitting(true);
+    setFormStatus({ submitted: false, success: false, message: '' });
+
+    try {
+      const response = await fetch(`${apiBaseUrl}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const payload = await response.json().catch(() => ({}));
+
+      if (!response.ok) {
+        throw new Error(payload.message || 'Something went wrong while sending your request.');
+      }
+
+      setFormStatus({
+        submitted: true,
+        success: true,
+        message:
+          payload.message ||
+          'Thank you! We received your message and sent a confirmation email to you.',
+      });
+
       setFormData({
         name: '',
         email: '',
@@ -53,8 +85,17 @@ const Contact = () => {
         service: '',
         message: ''
       });
-      setFormStatus({ submitted: false, success: false, message: '' });
-    }, 3000);
+    } catch (error) {
+      setFormStatus({
+        submitted: true,
+        success: false,
+        message:
+          error.message ||
+          'Your message could not be sent right now. Please try again shortly.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const containerVariants = {
@@ -260,11 +301,17 @@ const Contact = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="w-full btn-primary text-lg py-4 flex items-center justify-center"
+                  disabled={isSubmitting}
+                  className={`w-full btn-primary text-lg py-4 flex items-center justify-center ${
+                    isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                  }`}
                 >
                   <Send className="w-5 h-5 mr-2" />
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </motion.button>
+                <p className="text-xs text-secondary-500 dark:text-gray-400 text-center">
+                  You will receive a confirmation email after submission.
+                </p>
               </form>
             </div>
           </motion.div>
