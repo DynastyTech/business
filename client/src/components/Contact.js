@@ -200,16 +200,24 @@ const Contact = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   className={`mb-6 p-4 rounded-lg flex items-center space-x-3 ${
                     formStatus.success 
-                      ? 'bg-green-100 text-green-800 border border-green-200' 
-                      : 'bg-red-100 text-red-800 border border-red-200'
+                      ? 'bg-green-100 text-green-800 border border-green-200 dark:bg-green-900/35 dark:text-green-100 dark:border-green-700'
+                      : 'bg-red-100 text-red-800 border border-red-200 dark:bg-red-900/35 dark:text-red-100 dark:border-red-700'
                   }`}
                 >
                   {formStatus.success ? (
-                    <CheckCircle className="w-5 h-5 text-green-600" />
+                    <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-300" />
                   ) : (
-                    <AlertCircle className="w-5 h-5 text-red-600" />
+                    <AlertCircle className="w-5 h-5 text-red-600 dark:text-red-300" />
                   )}
-                  <span className="font-medium">{formStatus.message}</span>
+                  <span
+                    className={`font-medium ${
+                      formStatus.success
+                        ? 'text-green-800 dark:text-green-100'
+                        : 'text-red-800 dark:text-red-100'
+                    }`}
+                  >
+                    {formStatus.message}
+                  </span>
                 </motion.div>
               )}
 
