@@ -149,7 +149,6 @@ const ClientLogos = () => {
                       <img
                         src={client.logo}
                         alt={client.name}
-                        loading="lazy"
                         className="h-full w-auto object-contain max-w-[120px] md:max-w-[150px]"
                       />
                     </div>
