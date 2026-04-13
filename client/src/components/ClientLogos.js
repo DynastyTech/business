@@ -152,15 +152,6 @@ const ClientLogos = () => {
                         className="h-full w-auto object-contain max-w-[120px] md:max-w-[150px]"
                       />
                     </div>
-                    <span
-                      className={`mt-2 text-xs transition-colors duration-300 ${
-                        isFocused
-                          ? 'text-secondary-700 dark:text-gray-200'
-                          : 'text-gray-500 dark:text-gray-400'
-                      }`}
-                    >
-                      {client.name}
-                    </span>
                   </div>
                 );
               })}
