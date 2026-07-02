@@ -114,7 +114,7 @@ const ClientLogos = () => {
           className="text-center mb-8"
         >
           <p className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wider">
-            Trusted by Leading Organizations
+            Organisations our founder has worked with
           </p>
         </motion.div>
 

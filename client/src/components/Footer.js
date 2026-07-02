@@ -196,7 +196,7 @@ const Footer = () => {
               className="text-center md:text-left"
             >
               <p className="text-secondary-400 text-sm">
-                © {currentYear} Dynasty Tech Solutions & Consulting Pty Ltd. All rights reserved.
+                © {currentYear} Dynasty Tech Solutions (Pty) Ltd. All rights reserved.
               </p>
               
             </motion.div>
